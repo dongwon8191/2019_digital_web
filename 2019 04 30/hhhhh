@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+
+	.div_wrap{width:600px; height:100px;}
+	.div_wrap>div{width:100px; height:100px; float:left; border:10px solid black;}
+
+	.div_wrap>div:nth-child(1){background-color:red;}
+	.div_wrap>div:nth-child(2){background-color:orange;}
+	.div_wrap>div:nth-child(3){background-color:yellow;}
+	.div_wrap>div:nth-child(4){background-color:green;}
+	.div_wrap>div:nth-child(5){background-color:blue;}
+
+	</style>
+</head>
+<body>
+	<div>
+		<div class="div_wrap">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+	</div>
+</body>
+</html>

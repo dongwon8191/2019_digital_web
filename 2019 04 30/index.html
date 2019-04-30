@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>box css</title>
+	<style>
+		*{margin:0;}
+		.div_wrap{width: 200px; height: 100px; background-color: gray;} 전체 
+		.div_wrap div {width: 100px; height: 100px; float:left; border:0px solid black; 
+			box-sizing: border-box;} dorder랑 padding 안쪽으로 넣어준다
+		div.div_wrap>div:nth-child(1){background-color:red;}
+		div.div_wrap>div:nth-child(2){background-color: blue;}
+	/*div{width:100px; height:100px; background-color:red;*/
+
+	/*border:20px solid black; 
+	/*넓이값 140이 된다 패딩값에 곱 2 border 값에 곱 2 총 180*/
+/*border-width:10px*/
+/*border-style:solid;*/
+/*border-color: black;*/
+/*margin:10px;*/
+/*margin: 10px 20px;}10px 위아래 20px좌우 */
+/*margin:10px 20px 0 0;    */
+/*전체다 시계방향*/
+/*margin-left:0px;*/
+
+
+ 
+/*margin-top:10px margin-right:10px margin-bottom:10px margin-left:10px;}*/
+
+
+	</style>
+</head>
+<body>
+	<div class="div_wrap">
+		<div>1</div> 
+		<div>2</div> 
+	</div>
+	
+</body>
+</html>
