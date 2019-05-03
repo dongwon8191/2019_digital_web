@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		*{margin:0; padding:0; box-sizing:border-box;}
+		li{list-style:none;}
+
+		body{background-image: url(../images/bg_grid.gif);}
+
+		div#header{width: 980px;height: 100px; margin:0 auto;background-color: skyblue; position: relative;}
+		div#header>h1{width: 100px; margin: 0 auto; text-align: center; background-color: gray;}
+		div#header>div.util_menu{
+			width: 200px;height: 40px;
+			 position: absolute;background-color: #F00;
+			 top: 0; right: 0;}
+		div#header>div.gnb_menu{
+			width: 980px;height: 40px;
+			position: absolute; background-color: #0F0;
+			bottom: 0;
+		    /*display: none;*/}
+		    div.box{width: 300px;height: 100px;border: 1px solid black; margin: 0 auto;
+		    	position: relative;overflow:scroll; display:none;}
+		    	                   /*박스안에 가둔다 */
+		    div.box1,div.box2,div.box3{width: 100px;height: 100px;position: absolute; }
+		    div.box1{background-color: #f00;left: -50px; top: 0;}
+		    div.box2{background-color: #0f0; left: 50px; top: -50px;}
+		                                                    /*-값 위로*/
+		    div.box3{background-color: #00f; left: 100px; bottom: -50px;}
+		    div.box10{width: 500px;height: 100px;border:1px solid black; display: none;}
+		    div.box11,div.box12,div.box13{width: 100px;height: 100px;float: right;}
+		    div.box11{background-color: #f00;}
+		    div.box12{background-color: #0f0;}
+		    div.box13{background-color: #00f;}
+               /*menu*/
+		    ul.menu{width: 985px; margin: 0 auto;}
+
+		    ul.menu>li{float: left; width: 196px; height: 40px; background-color: 
+		    	white; text-align: center; line-height: 40px; border-right: 1px solid black;}
+
+		    	/*컨트롤 쉬프트 와이 계산가능*/
+
+		    ul.menu>li:nth-child(1){border-left: 1px solid black;}
+		    ul.menu>li:hover{background-color: gray; color: white; cursor: pointer;}
+
+	</style>
+</head>
+<body>
+<div id="header">
+	<h1>LOGO</h1>
+	<div class="util_menu">util_menu</div>
+	<div class="gnb_menu">
+		
+		<ul class="menu">
+	<li>menu1</li>
+	<li>menu2</li>
+	<li>menu3</li>
+	<li>menu4</li>
+	<li>menu5</li>
+</ul>
+
+</div>	
+<div class="box">
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	<div class="box3">box3</div>
+	
+</div>
+<div class="box10">
+	<div class="box11">box11</div>
+	<div class="box12">box12</div>
+	<div class="box13">box13</div>
+
+	
+</div>
+<!-- ul.menu>li*5>{menu$} -->
+<!-- <ul class="menu">
+	<li>menu1</li>
+	<li>menu2</li>
+	<li>menu3</li>
+	<li>menu4</li>
+	<li>menu5</li>
+</ul> -->
+</body>
+</html>

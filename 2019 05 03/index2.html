@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		*{margin:0; padding:0; box-sizing: border-box; }
+
+		.menu{width: 985px; margin:0 auto; position: absolute; }
+		.menu>li{float:left; width: 196px;height: 40px; background-color: white; text-align: center; line-height:40px; border-right: 1px solid black;}
+		li{list-style: none;}
+		.menu>li:nth-child(1){border-left:1px solid black;}
+		.menu>li:hover{background-color: gray; color: white; cursor: pointer;}
+
+		#header{width: 980px;height: 100px; margin:0 auto;background-color:skyblue; position: relative;}
+		#header>h1{width: 100px; margin:0 auto; text-align:center; background-color: gray;}
+		#header>.util_menu{width: 200px;height: 40px;background-color:red; position: absolute;top: 0;right: 0;}
+		#header>.gnb_menu{}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>logo</h1>
+		<div class="util_menu">util menu</div>
+<div class="gnb_menu">
+<ul class="menu">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+	</ul>
+</div>
+	</div>
+	<div>
+	<ul class="menu">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+	</ul>
+</div>
+
+</body>
+</html>
