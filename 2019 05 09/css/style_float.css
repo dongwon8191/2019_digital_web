@@ -13,7 +13,7 @@ nav.menu_wrap>ul>li>a{
      	width: 980px; height: 50px;
       margin:0 auto; background-color: gray; }
      /* header#header_wrap:after{content: "" ;clear:both;display: block;}*/
-     header#header_wrap>h1{ float: left;width: 150px; background-color: pink; line-height: 50px; text-align:center;}
+     header#header_wrap>h1{ color:black; float: left;width: 150px; background-color: pink; line-height: 50px; text-align:center;}
      header#header_wrap>nav.menu_wapper{float:right;width: 800px;background-color: skyblue; line-height:50px; text-align:center;}
       header#header_wrap>h1,
        header#header_wrap>nav.menu_wapper{line-height: 50px;text-align: center;}
@@ -29,9 +29,10 @@ nav.menu_wrap>ul>li>a{
         
         .menu_wapper>ul{}
         /*.menu_wapper>ul:after{content:"" ;clear:both; display:block; }*/
-        .menu_wapper>ul>li{float:left;}
-        .menu_wapper>ul>li>a{ width: 160px; display:block; text-align:center;  border-right:1px solid white; font-weight:bold; }
+        .menu_wapper>ul>li{float:left; width: 160px;}
+        .menu_wapper>ul>li>a{display:block; text-align:center;  border-right:1px solid white; font-weight:bold; }
         .menu_wapper>ul>li>a:hover{background-color:blue; color:white;}
+        .menu_wapper>ul>li>a:nth-child(1){border-left: 1px solid white; }
 
 
        
