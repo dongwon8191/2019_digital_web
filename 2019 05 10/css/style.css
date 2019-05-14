@@ -3,18 +3,18 @@
 
 /*header*/
 #header_wrap{width: 980px; height: 100px; margin: 0 auto;
- background-color:gray; position: relative;}
+ background-color:white; position: relative;}
 
 #header_wrap>h1{width: 200px;
- margin:0 auto; background-color: pink; text-align: center;} 
+ margin:0 auto; background-color: white; text-align: center;} 
 #header_wrap>div.util_menu{height: 35px;background-color: skyblue;
 position: absolute; right: 0; top: 10px; text-align: center; line-height:}
-#header_wrap>nav.gnb_wrap{width: 980px; height: 45px; background-color: violet; position: absolute;
+#header_wrap>nav.gnb_wrap{width: 980px; height: 45px; background-color: #1D5DA4; position: absolute;
 bottom: 0; text-align: center;}
 
 .util_menu>ul{}
 .util_menu>ul>li{float:left; line-height:35px; padding: 0 15px; border-right: 1px solid black;}
-.util_menu>ul>li>a{display:block; text-align: center; font-weight:bold;}
+.util_menu>ul>li>a{display:block; text-align: center; font-weight:bold; }
 /*.util_menu>ul>li>a:nth-child(1){border-left:1px solid black;}
 */
 .util_menu>ul>li>a:hover{background-color:white; color:black;}
@@ -24,7 +24,16 @@ bottom: 0; text-align: center;}
 #header_wrap>nav.gnb_wrap>ul>li{ float:left; width: 163.33px; line-height:45px;}
 #header_wrap>nav.gnb_wrap>ul>li>a{display:block; text-align: center; font-weight:bold; border-right: 1px solid white; color:black; }
 #header_wrap>nav.gnb_wrap>ul>li>a:nth-child(1){border-left:1px solid white;}
-#header_wrap>nav.gnb_wrap>ul>li>a:hover{background-color: blue; color:white;}
+#header_wrap>nav.gnb_wrap>ul>li>a:hover{background-color:#4B8CE0 ; color:white;}
 
-#content{width: 860px; height: 500px; background-color:yellow; margin:0 auto;}
+/*visual*/
+#visual{height: 300px; background-color:#1e3664; margin-bottom:50px; }
+div#visual>.slider{width: 980px; height: 300px; background-color: skyblue; margin:0 auto;}
+
+div#content{width: 980px; height: 1000px;background-color:pink; margin: 0 auto; padding:20px 0; margin:0 auto 50px auto;}
+div#content>#section{float:left; width: 700px; height: 500px; background-color: red;}
+div#content>#aside{float: right; width: 260px;  height: 500px; background-color: red;}
+#footer_wrap{width: 980px; height: 100px; margin:0 auto;  background-color: gray;}
+
+
 
