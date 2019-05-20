@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>sprites</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+        body{background-color:black;}
+
+		div.icon_wrap{}
+		div.icon_wrap>.btn{width: 30px; height: 30px; 
+			background-image:url(../images/icon-sprite.png);
+			text-indent:-1000px; cursor:pointer; float: left;}
+
+
+		div.icon_wrap>.item01{background-position: 0 -330px; transition:0.3s;}
+		div.icon_wrap>.item02{background-position: -40px -330px; transition:0.3s;}
+		div.icon_wrap>.item03{background-position: -80px -330px; transition:0.3s;}
+		div.icon_wrap>.item04{background-position: -120px -330px; transition:0.3s;}
+		div.icon_wrap>.item05{background-position: -160px -330px; transition:0.3s;}
+		
+
+		div.icon_wrap>.item01:hover{background-position: 0 -360px;}
+		div.icon_wrap>.item02:hover{background-position: -40px -360px;}
+		div.icon_wrap>.item03:hover{background-position: -80px -360px;}
+		div.icon_wrap>.item04:hover{background-position: -120px -360px;}
+		div.icon_wrap>.item05:hover{background-position: -160px -360px;}
+
+
+		div.icon_wrap>.item01.active{background-position: 0 -360px;}
+		div.icon_wrap>.item02.active{background-position: -40px -360px;}
+		div.icon_wrap>.item03.active{background-position: -80px -360px;}
+		div.icon_wrap>.item04.active{background-position: -120px -360px;}
+		div.icon_wrap>.item05.active{background-position: -160px -360px;}
+
+	
+
+/*sns*/
+
+		ul.sns_wrap{}
+		ul.sns_wrap>li{width: 30px;height: 30px;background-image:url(../images/icon-sprite.png
+		);text-indent:-1000px; float: left;opacity:1; transition:0.3s; margin-right:10px; }
+
+		ul.sns_wrap>li:nth-child(1){background-position: -200px -450px;}
+		ul.sns_wrap>li:nth-child(2){background-position: -240px -450px;}
+		ul.sns_wrap>li:nth-child(3){background-position: -280px -450px;}
+
+           ul.sns_wrap>li/*:nth-child(1)*/:hover{opacity:0.3;}
+
+		ul.sns_wrap>li>a{display: block; line-height:30px;}
+
+
+		/*<gnb>*/
+        #gnb{}
+
+        #gnb>.menu{background-image: url(../images/sprites.png);width: 140px; height: 50px; float: left;}
+
+        #gnb>.item01{background-position: 0 0; transition:0.3s;}
+        #gnb>.item02{background-position: -140px 0; transition:0.3s;}
+        #gnb>.item03{background-position: -280px 0; transition:0.3s;}
+        #gnb>.item04{background-position: -420px 0; transition:0.3s;}
+        #gnb>.item05{background-position: -560px 0; transition:0.3s;}
+        #gnb>.item06{background-position: -700px 0; transition:0.3s;}
+        #gnb>.item07{background-position: -840px 0; transition:0.3s;}
+
+
+
+        #gnb>.item01:hover{background-position: 0 -50px;}
+        #gnb>.item02:hover{background-position: -140px -50px;}
+        #gnb>.item03:hover{background-position: -280px -50px;}
+        #gnb>.item04:hover{background-position: -420px -50px;}
+        #gnb>.item05:hover{background-position: -560px -50px;}
+        #gnb>.item05:hover{background-position: -700px -50px;}
+        #gnb>.item05:hover{background-position: -840px -50px;}
+
+#gnb_top{}
+#gnb_top>.menu{background-image: url(../images/top_gnb.png);
+width: 140px; height: 50px;}
+
+#gnb_top>.item1{background-position: 0 0;}
+#gnb_top>.item2{background-position: 0 -50px;}
+#gnb_top>.item3{background-position: 0 -100px;}
+#gnb_top>.item4{background-position: 0 -150px;}
+#gnb_top>.item5{background-position: 0 -200px;}
+#gnb_top>.item6{background-position: 0 -250px;}
+#gnb_top>.item7{background-position: 0 -300px;}
+
+        #gnb_top>.item1:hover{background-position:0 -350px; }
+        #gnb_top>.item2:hover{background-position: 0 -400px;  }
+        #gnb_top>.item3:hover{background-position: 0 -450px; }
+        #gnb_top>.item4:hover{background-position: 0 -500px;}
+        #gnb_top>.item5:hover{background-position: 0 -550px; }
+        #gnb_top>.item6:hover{background-position: 0 -600px; }
+        #gnb_top>.item7:hover{background-position: 0 -650px; }
+
+
+
+
+
+
+
+/*rgb 투명도*/
+
+	.box{width: 100px;height: 100px;background-color:red;
+			color:white;opacity:1;transition:.3s;}
+		.box:hover{opacity:0.3;}
+		.box1{width: 100px;height: 100px;background-color:rgb(0,255,255,1);
+			color:white;transition:.3s;}
+		.box1:hover{background-color:rgb(0,255,255,0.3);}
+		.box2{width: 100px;height: 100px;background-color:rgb(0,255,255,1);
+			color:white;display:block;transition:1s;}
+		.box2:hover{display:none;}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="icon_wrap clearfix">
+		<div class="btn item01">icon</div>
+		<div class="btn item02 active">icon</div>
+		<div class="btn item03">icon</div>
+		<div class="btn item04">icon</div>
+		<div class="btn item05">icon</div>
+	</div>
+
+	<ul class="sns_wrap clearfix">
+		<li><a href="#">페이스북</a></li>
+		<li><a href="#">유투브</a></li>
+		<li><a href="#">트위터</a></li>
+	</ul>
+
+<nav id="gnb">
+	
+	<!-- div.menu.item01.active>a[#]>{menu} -->
+	<div class="menu item01"><a href="#"></a></div>
+	<div class="menu item02"><a href="#"></a></div>
+	<div class="menu item03"><a href="#"></a></div>
+	<div class="menu item04"><a href="#"></a></div>
+	<div class="menu item05"><a href="#"></a></div>
+	<div class="menu item06"><a href="#"></a></div>
+	<div class="menu item07"><a href="#"></a></div>
+</nav>
+
+<nav id="gnb_top">
+	
+	<div class="menu item1"><a href="#"></a></div>
+	<div class="menu item2"><a href="#"></a></div>
+	<div class="menu item3"><a href="#"></a></div>
+	<div class="menu item4"><a href="#"></a></div>
+	<div class="menu item5"><a href="#"></a></div>
+	<div class="menu item6"><a href="#"></a></div>
+	<div class="menu item7"><a href="#"></a></div>
+</nav>
+
+
+
+	<div class="box">안녕하세요</div>
+	<div class="box1">안녕하세요</div>
+	<div class="box2">안녕하세요</div>
+
+
+</body>
+</html>

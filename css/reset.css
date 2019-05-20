@@ -1,0 +1,4 @@
+.clearfix{content:""; clear:both; display: block;}
+a{text-decoration:none;}
+a:visited,a:link{color:black;}
+li{list-style:none;}
