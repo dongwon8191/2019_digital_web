@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>함수ㅎㅎㅎㅎㅎㅎㅎ</title>
+	<script>
+		var result=0;
+		function dan(han){
+			for(var i=1; i<=9; i++){
+				result = han * i;
+				//alert(han + " x " +  i  + "=" + result);
+			
+			document.write(han + " x " +  i  + " = " + result + "<br>");
+			//document.write(han + " x 2 = " + han*2 + "<br>");
+		}
+
+         }
+
+
+
+         function printMsg(name,age){
+         	document.write("학생이름 : " + name + "<br>");
+         	document.write("학생나이 : " + age + "<br>");
+         }
+
+
+         var printM = function(mber){
+         	document.write(mber);
+         }
+
+
+	</script>
+</head>
+<body>
+
+	<!-- <script>
+		dan(2);
+
+	</script>
+ -->
+ <button type=button onclick="dan(3);">3단출력</button>
+	<button type=button onclick = "printMsg('홍길동',25);">홍길동</button>
+	<button type=button onclick = "printM(10);">엠버튼</button>
+</body>
+</html>
