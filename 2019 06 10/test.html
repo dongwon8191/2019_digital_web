@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<title>문서 제목</title>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			var myslider = $('.slider').bxSlider({
+				auto:true,pager:false,controls:false
+			});
+			$('.prevBtn').click(function(){
+				myslider.goToPrevSlide();
+				return false;
+
+			});
+
+				$('.nextBtn').click(function(){
+				myslider.goToNextSlide();
+				return false;
+
+			});
+
+			
+
+			
+		});
+	</script>
+
+
+
+	<style>
+		img{display: block;}
+		.wrapper{width: 500px; position: relative;  }
+		.bx-wrapper{
+			    -moz-box-shadow: none;
+                -webkit-box-shadow: none;
+                  box-shadow: none;
+                    border: 0 none;
+                    background: #fff;
+                    margin-bottom: 0px;
+
+		}
+
+		.wrapper .prevBtn,.wrapper .nextBtn{
+			position: absolute; top: 130px;
+		}
+
+		.wrapper .prevBtn{left: 10px;}
+		.wrapper .nextBtn{right: 10px;}
+	</style>
+
+
+
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="slider">
+			<li><img src="images/2019030709251895796_1.jpg" alt=""></li>
+			<li><img src="images/F1550124131.jpg" alt=""></li>
+			
+			
+		</ul>
+
+		<div class="prevBtn"><a href="#">
+			<img src="images/btn_prev.png" alt=""></a></div>
+
+			<div class="nextBtn"><a href="#">
+			<img src="images/btn_next.png" alt=""></a></div>
+	</div>
+</body>
+</html>
