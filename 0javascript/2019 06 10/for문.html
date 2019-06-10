@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+
+	<script>
+
+		// i=0 i<5 i++ 0~5
+		
+
+		for( var i=0; i<5; i++){
+			var result = "";
+			for(var k=0; k<=i; k++){
+				result += "*";
+			}
+			
+			document.write(result+"<br>");
+		}
+
+		var sum = 0;
+		for(var z=1;z<=10; z++){
+			sum+=z;//sum = sum +z;
+		}
+
+		document.write(sum + "<br>");
+
+		var total = 0;
+		for(var a=1;a<=10; a++){
+			//document.write(a + "<br>");
+		
+
+		var result = "";
+		for(var b=1;b<=a; b++){
+			result = result + b;
+			if(b !=a) result = result + "+";
+			total = total +b;
+
+		}
+
+		//total = total + a;
+		document.write(result+" = "+ total + "<br>")
+		total = 0;
+	
+           }
+
+		// var x = 1;
+		// var sum = 0;
+		// while(x<=10);{
+		// sum = sum + x; x++;}
+
+		// document.write(sum);
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html
