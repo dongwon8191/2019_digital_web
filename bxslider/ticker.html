@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>ticker</title>
+	<link rel="stylesheet" href="../reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.slider').bxSlider({
+				mode:'vertical',
+				pager:false,
+				controls:false,
+				auto:true
+			});
+		});
+
+
+		$('.btn_up')
+
+
+	</script>
+	<style>
+		body{background-color: #cdcdcd;}
+		.slider > div{height: 80px; position: relative;}
+		.slider > div>.iconPhoto{width: 50px; height: 50px;
+		 border-radius: 25px; 
+		 background:red url(../images/testimg.jpg) no-repeat center;
+		 text-indent: -9999px; 
+		}
+
+		 .slider .title{width: 300px;
+		 	line-height: 25px;
+		 	font-size: 1.2em;
+		 	color:red; font-weight: bold;
+		 	position: absolute;left: 60px; top: 0;}
+
+		 	.slider .subject{width: 800px; line-height: 40px; 
+		 		background-color: white;
+		 		border-radius: 20px;
+		 		padding: 5px 20px;position: absolute;
+		 		left: 60px; bottom: 0;
+
+		 	}
+		 		.slider .subject:after{
+		 			content:""; border-width:10px;
+		 			border-style:solid;
+		 			/*border-color:red orange yellow green;*/
+		 			border-color:transparent blue transparent  transparent ;
+		 			position: absolute;
+		 			top: 15px;
+		 			left: -23px;
+		 			
+		 		}
+
+		 		.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+     box-shadow:none; 
+     border:0 none; 
+     background:none; 
+
+} 
+
+
+
+              .btn_up{position: absolute; bottom: 200px;}
+               .btn_down{position: absolute; bottom: 200px;}
+              .btn_down{top:40px; right:100px; z-index:1; }
+              .btn_up{top:5px; right:100px; z-index:1; }
+
+            
+ 
+             
+
+
+	</style>
+
+<body>
+		<div class="wrap">
+	<div class="slider">
+
+		<div>
+			<!-- 레이아웃 안 --> <div class="iconPhoto">사진</div>
+			<!-- 레이아웃 안 --> <div class="title">컴퓨터학과</div>
+			<!-- 레이아웃 안 --> <div class="subject">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+		</div>
+
+		 <div>
+			<!-- 레이아웃 안 --> <div class="iconPhoto">사진</div>
+			<!-- 레이아웃 안 --> <div class="title">디지털미디어</div>
+			<!-- 레이아웃 안 --> <div class="subject">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+
+          
+
+           </div>
+
+			
+
+			
+
+		 </div>
+		 
+<div class="topBtn"><a href="#">
+			<!-- <a href="javascript:void(0)"> 앵커태그 방지-->
+			<img src="../images/btn_top01.png" alt=""></a></div>
+		<div class="bottomBtn"><a href="#"><img src="../images/btn_bottom01.png" alt=""></a></div>
+
+     </div>
+
+
+	
+		
+
+</body>
+</html>
