@@ -10,28 +10,42 @@
 		#wrapper{width: 100%; margin:0 auto;}
 		#header{height: 160px;}
 		#header>.util_wrap{height: 40px; background-color: #0044af; position: relative;}
-
-
-	.util_wrap>ul.util_menu1{position: absolute;left: 150px;}
+	.util_wrap>ul.util_menu1{position: absolute;left: 100px;}
 	.util_wrap>ul.util_menu1>li{float: left; 
-		border-right:3px solid #0044af;}
+		border-right:2px solid #0044af;}
 	.util_wrap>ul.util_menu1>li.white{width: 120px;height: 40px; background-color:white }
 	.util_wrap>ul.util_menu1>li.navy{width: 120px;height: 40px; background-color:#00163b;}
 	.util_wrap>ul.util_menu1>li.white>a{color:#cdcdcd; }
-	.util_wrap>ul.util_menu1>li>a{display: block; text-align: center; padding:10px 20px; color:white; font-weight:bold; line-height: 15px;}
+	.util_wrap>ul.util_menu1>li>a{display: block; text-align: center; padding:10px 20px; color:white; line-height: 15px;}
+	.util_wrap>ul.util_menu2{float: right; position: absolute; right: 110px; }
+	.util_wrap>ul.util_menu2>li{float: left; }
+	.util_wrap>ul.util_menu2>li>a{display: block;line-height: 40px; padding:0 3px; color: white; font-size:0.8em}
+	.util_wrap>ul.util_menu2>li>a>img{ display: block; padding: 12px 0; padding-right: 10px;} 
 
 
-	.util_wrap>ul.util_menu2{}
-	.util_wrap>ul.util_menu2>li{}
-	.util_wrap>ul.util_menu2>li>a{}
+   /*main_menu*/
+
+
+   .main_wrap{height: 117px;  margin:0 auto;position: relative;}
+   .main_wrap>ul.main_menu{float: right; margin-right:200px;}
+   .main_wrap>ul.main_menu>li{float: left;  }
+   .main_wrap>ul.main_menu>li>a{display: block; line-height:120px; padding:0 20px;
+   	color:#787878; font-weight: bold;}
+   .main_wrap>ul.main_menu>li>a>img{display: block; position: absolute; top: 38px; right: 110px;}
+
+   .main_menu>div.left>li>a>img{position: absolute; left: 100px; top: 20px;}
+
+   /*content*/
+
+   #content_wrap{width: 100%; height: 1307px; margin: 0 auto; background-image: url(img/배경01.jpg);}
+   .box{width: 100%;height: 1307px; margin:0 auto; background-image: url(img/back.png);opacity:0.8;}
+   #content_wrap>.content{}
 
 
 
-
-
-
-
-
+	
+	
+	
 	</style>
 </head>
 <body>
@@ -44,27 +58,40 @@
 					<li class="navy"><a href="#">대학원</a></li>
 				</ul>
 
-				<ul class="util_menu2">
-					<li><a href="#">글자크기</a></li>
-					<li><a href="#">이미지</a></li>
-					<li><a href="#">찾아오시는 길</a></li>
+				<ul class="util_menu2 clearfix">
+					<li class="size"><a href="#">글자크기</a></li>
+					<li class="size"><a href="#">
+						<img src="../images/util.png" alt="">
+					</a></li>
+					
+
+					<li><a href="#">찾아오시는길</a></li>
 					<li><a href="#">ENGLISH</a></li>
-					<li><a href="#">사이트 맵</a></li>
+					<li><a href="#">사이트맵</a></li>
 				</ul>
+				
 			</div>
+               
 
 			<div class="main_wrap">
 				<img src="" alt="">
 
-			<ul class="main_menu">
+			<ul class="main_menu clearfix">
+
+				<div class="left">
+					<li><a href="#">
+						<img src="../images/logo.png" alt="">
+					</a></li>
+				</div>
+
 				<li><a href="#">대학소개</a></li>
 				<li><a href="#">학과소개</a></li>
 				<li><a href="#">학사안내</a></li>
 				<li><a href="#">대학생활</a></li>
 				<li><a href="#">학생지원센터</a></li>
 				<li>
-					<a href="#"></a>
-					<img src="" alt="">
+					<a href="#"><img src="../images/logo1.png" alt=""></a>
+					
 				</li>
 
 			</ul>
@@ -74,6 +101,7 @@
 
 		<div id="content_wrap">
 			<!-- bgi -->
+			<div class="box"></div>
 			<div class="content"></div>
 		</div>
 
