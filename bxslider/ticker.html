@@ -10,16 +10,21 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('.slider').bxSlider({
+			var ticker = $('.slider').bxSlider({
 				mode:'vertical',
 				pager:false,
 				controls:false,
-				auto:true
+				auto:true,
+			});
+			$('.bottomBtn').click(function(){
+				ticker.goToPrevSlide();
+				return false; //hash tag 방지
+			});
+			$('.topBtn').click(function(){
+				ticker.goToNextSlide();
+				return false; //hash tag 방지
 			});
 		});
-
-
-		$('.btn_up')
 
 
 	</script>

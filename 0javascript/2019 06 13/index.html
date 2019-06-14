@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		#var1{width: 100px;height: 100px;
+			background-color: skyblue;}
+	</style>
+</head>
+<body>
+	<div id="var1">11</div>
+	<div id="var2">22</div>
+	<div id="var3">33</div>
+		
+
+	
+
+	<button type="button" onclick="inputCar1()">버튼1</button>
+	<button type="button" onclick="inputCar2()">버튼2</button>
+	<button type="button" onclick="inputCar3()">버튼3</button>
+
+
+	<script>
+		var car = ['sonata',100,'white'];
+		var color = ['red','blue','yellow']
+		// for(var i=0;l<car.length;i++){
+		// document.write(car[i] + "<br>");}
+
+		function inputCar1(){
+
+		document.getElementById('var1').innerHTML = "차명은:" + car[0];
+		document.getElementById('var1').style.backgroundColor = color[0];
+	}
+function inputCar2(){
+
+		document.getElementById('var1').innerHTML = "차명은:" + car[0];
+		document.getElementById('var1').style.backgroundColor = color[1];
+	}
+function inputCar3(){
+
+		document.getElementById('var1').innerHTML = "차명은:" + car[0];
+		document.getElementById('var1').style.backgroundColor = color[2];
+	}
+
+	var car = ['sonata',100,'white']; //배열
+
+	var myCar = {name:'sonata',speed:100,color:'white'}//객체
+
+	document.write(myCar['name']);
+
+	document.getElementById('var1').innerHTML = myCar['name'];//=myCar.name
+	document.getElementById('var2').innerHTML = myCar['speed'];
+	document.getElementById('var3').innerHTML = myCar['color'];
+
+
+
+	</script>
+
+
+	<div id="msg1">ㅇㅇㅇㅇㅇ</div>
+	<button type="button " onclick="objTitle()">명령어</button>
+	<script>
+		var obj = {a:function(){
+			 return "hellow sonata";
+			
+			},
+			b:function(x){
+				var result = x;
+				return result;
+			},
+			c:function(x,y){
+				var result = x+y;
+				return result;
+			}
+
+
+		};
+
+		function objTitle(){
+
+		}
+
+		document.getElementById("msg1").innerHTML = obj.a();
+
+		
+		// dbj.b(100)
+
+	</script>
+</body>
+</html>
