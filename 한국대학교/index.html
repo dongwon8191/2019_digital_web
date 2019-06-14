@@ -14,7 +14,7 @@
 <script>
 	$(document).ready(function(){
 			var  myslider = $(".slider").bxSlider({
-				
+				auto:true
 			});
 			$('.prevBtn').click(function(){
 				myslider.goToPrevSlide();
@@ -25,25 +25,56 @@
 				return false;
 			});
 		});
-</script>
 
-
-<script>
-		
-		$(document).ready(function(){
-			var  myslider2 = $(".slider2").bxSlider({
+$(document).ready(function(){
+			var  myslider = $(".slider2").bxSlider({
+				auto:true,controls:false
 				
 			});
 			$('.prevBtn').click(function(){
-				myslider2.goToPrevSlide();
+				myslider.goToPrevSlide();
 				return false;
 			});
 			$('.nextBtn').click(function(){
-				myslider2.goToNextSlide();
+				myslider.goToNextSlide();
 				return false;
 			});
 		});	
-	</script>
+
+
+$(document).ready(function(){
+	var ticker = $('.slider_wrap').bxSlider({
+mode:'vertical',
+pager:false,
+controls:false,
+auto:true,
+	
+});
+
+$('.bottom_button').click(function(){
+ticker.goToPrevSlide();
+return false; 
+});
+
+$('.top_button').click(function(){
+ticker.goToNextSlide();
+return false; 
+});
+
+});
+
+
+
+
+
+
+</script>
+
+
+
+		
+		
+	
 
 	<style>
 		#wrapper{width: 100%; margin:0 auto;}
@@ -82,21 +113,22 @@
    	 .top_content>.content1>.card>ul>li>.text{}
    	 .top_content>.content1>.card>ul>li>.text>p{color:white; text-align: center;}
    	 .content_wrapper>ul.section{width: 1200px; margin: 0 auto;}
-   	 .content_wrapper>ul.section>li{width: 25%; height: 300px; border: 1px solid #000; background-color: skyblue; float: left; }
+   	 .content_wrapper>ul.section>li{width: 25%; height: 300px; /*border: 1px solid #000;*//* background-color: skyblue;*/ float: left; }
    	 .content_wrapper>ul.section>li:nth-child(1){width:900px; height: 440px;}
    	 .content_wrapper>ul.section>li:nth-child(2){width:300px; height: 450px;}
    	 .content_wrapper>ul.section>li:nth-child(3){width:300px; height: 225px; background-color: #00163b;}
-   	 .content_wrapper>ul.section>li:nth-child(4){width:300px; height: 225px;}
+   	 .content_wrapper>ul.section>li:nth-child(4){width:300px; height: 225px; background-color: #1651b7;}
    	 .content_wrapper>ul.section>li:nth-child(5){width:300px; height: 225px; background-color: white;}
    	 .content_wrapper>ul.section>li:nth-child(6){width:300px; height: 225px;}
    	 .content_wrapper>ul.section>li:nth-child(7){width:300px; height: 225px;}
    	 .content_wrapper>ul.section>li:last-child{width: 900px; height: 225px;}
    	 /*section1 slider*/
  
-   	.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+   .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
     position: absolute;
     bottom: 50px;
     width: 100%;}
+
     .bx-wrapper {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -109,9 +141,27 @@
    .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
     background:#0045ad;
 }
+
+
+
+
+
+    
+    
+/*button*/
+
+.section>.slider>div>button{margin-bottom:50px;}
+
+
+
+
+
+
+
 h2{color:white; padding-left:20PX; padding-top:20px;}
 .section>li.icon>img{margin:0 auto; line-height: 45px; padding-top:30px; }
 .section>li.icon>p{ float: left; color: white; margin-left:25px; text-align: center; padding:0 -20px;}
+
 /*section6 tr*/
 .tr{width: 300px; height: 225px;
 position: relative;  overflow:hidden; }
@@ -125,40 +175,80 @@ left: 50%; top: 50%; position: absolute; top:16px; transform:translate(-50%,-50%
 .conent5{position: relative;}
 .content5>img{margin-left: 20px;}
 .content5>p{color:navy; font-weight: bold; font-size: 1.7em; padding:8px 20px; }
-
 p.news_text{font-size:0.8em; color:black; position: absolute; margin-left:130px; margin-bottom:50px; }
 .sns_logo{position: relative;}
 .sns_logo>img{position: absolute; top: 20px; left: 140px;}
-
-
 }
-
-
-
 .wrapper{position: relative;}
-
 .footer{  height: 165px; position: relative;}
 .footer>ul.footer_menu{margin:0 auto;padding-left:637px;}
 .footer>ul.footer_menu>li{float: left; position: relative;}
 .footer>ul.footer_menu>li:after{content:""; display: block; width: 1px; height: 10px; background-color: #000; position: absolute;top: 27px;}
 .footer>ul.footer_menu>li:first-child:after{content:"";display: none;}
-
-
 .footer>ul.footer_menu>li>a{display: block; text-align: center; padding:20px 13px; font-size:1em; font-weight: bold;}
-
 .footer>.footer_text>p{ margin-left:650px; color:#9c9c9c;}
 .footer>.footer_text{position: absolute; bottom: 20px;}
 .footer_text>h4{text-align: center; margin-left:287px; padding-top:10px; color:#9c9c9c;
 font-weight:bold;}
 
-
-
-.bottom_wrap{}
-.bottom_wrap>.bottom{position: relative;}
-.bottom_wrap>.bottom>.box{width: 300px; height: 60px; background-color:white; position: absolute;
+.bottom{position: relative;}
+.bottom>.box{width: 300px; height: 60px; background-color:white; position: absolute;
  bottom:85px; left: 350px;}
- .bottom_wrap>.bottom>.box>ul>li{float: left;}
-.bottom_wrap>.bottom>.box2{}
+ .bottom>.box>ul>li{float: left;  font-size:1.1em; padding-left:30px; padding-top:15px;}
+ 
+
+  .bottom>.box>ul>div{position: relative;}
+ .bottom>.box>ul>div.one{font-size:1.2em;  font-weight:bold; color:#6b6b6b; position: absolute; left: 120px; top: 13px;}
+
+ .bottom>.box>ul>div.two{font-size:1.2em;font-weight:bold;color:#6b6b6b; position: absolute;right: 80px; top: 13px;}
+
+ .bottom>.box>ul>li.title01{color:#03163e; font-weight:bold; font-size:1.1em; padding-left:20px;}
+ .bottom>.box>ul>li.day{padding-left:50px;}
+
+.bottom>.box2{width: 900px; height: 60px; background-color:white; position: absolute; bottom: 85px; right: 350px; }
+
+
+.top_button{position: absolute;right: 0px;top: 0;}
+.bottom_button{position: absolute;right:0px; bottom: 0;}
+
+
+.slider_wrap>div>li.title{padding-left: 30px; color:#686868; font-weight:bold;}
+.slider_wrap>div>li.subject{position: absolute; right:100px; color:#6b6b6b;}
+.slider_wrap>div>li{padding:18px 10px;}
+
+
+/*section4*/
+
+.top_content>.section4>h2{color:white; padding-left:20PX; padding-top:10px;}
+.top_content>.section4{position: relative;}
+
+
+
+.section4>ul.list>li{margin-top:50px; font-size:0.9em; color:white; }
+.section4>ul.list>li>p{float: left; padding-left:15px; padding-top:5px;list-style:square;}
+.section4>ul{position: relative;}
+.section4>ul.list:before{content:"";display: block;width: 250px; border: 1px solid #fff; position: absolute;left: 20px; bottom: 120px;}
+.section4>ul.list>li>span{float:right;padding-right:10px; padding-top: 5px;}
+
+
+/*btn*/
+
+.btn_wrap>.btn{position: absolute; left: 100px;	bottom: 80px;width: 170px;	 height: 40px;	background-color: #192c4d;
+color:white; text-align: center; padding: 8px 0; font-size:0.8em;	}
+
+.btn_wrap>.btn>a{color:white;}
+
+.btn_wrap01>.btn01>a{color:white;}
+.btn_wrap01>.btn01{width: 170px;	height: 40px; 	background-color:#000; border:1px solid #fff; position: absolute; 
+right: 450px;	bottom: 200px;  text-align: center; padding: 8px 0; font-size:0.8em; }
+
+.btn_wrap02>.btn02{position: absolute;right: 690px; bottom: 40px;		 width: 170px;	height: 40px; background-color:#ff4538;	border: 1px solid #fff;
+	text-align: center;	padding: 8px 0;}
+.btn_wrap02>.btn02>a{color:white;  font-size:0.8em;}
+
+
+
+
 
 
 
@@ -166,7 +256,6 @@ font-weight:bold;}
 
 
    
-
    
 	
 	
@@ -290,10 +379,35 @@ font-weight:bold;}
 	  			<li class="section01">
 	  				<div class="slider">
 
-	  				<div><img src="img/section1.png" alt=""></div>
-	  				<div><img src="img/section1.png" alt=""></div>
-	  				<div><img src="img/section1.png" alt=""></div>
-	  				<div><img src="img/section1.png" alt=""></div>
+	  				<div class="btn_wrap">
+	  					
+	  					<div class="btn"><a href="	#">자세히보기 ▶</a></div>
+	  					<img src="img/section1.png" alt="">
+
+	  				</div>	<div class="btn_wrap">
+	  					
+	  					<div class="btn"><a href="	#">자세히보기 ▶</a></div>
+	  					<img src="img/section1.png" alt="">
+	  					
+	  				</div>
+	  					<div class="btn_wrap">
+	  					
+	  					<div class="btn"><a href="	#">자세히보기 ▶</a></div>
+	  					<img src="img/section1.png" alt="">
+	  					
+	  				</div>
+	  					<div class="btn_wrap">
+	  					
+	  					<div class="btn"><a href="	#">자세히보기 ▶</a></div>
+	  					<img src="img/section1.png" alt="">
+	  					
+	  				</div>
+	  				
+	  				
+	  				            
+	  				            
+	  				
+	  				
 
 	  				
 
@@ -303,9 +417,17 @@ font-weight:bold;}
 	  				<div class="prevBtn"><a href="#"><img src="images/btn_prev.png" alt=""></a></div>
 	  				<div class="nextBtn"><a href="#"><img src="images/btn_next.png" alt=""></a></div>
 	  			</li>
+
 	  			
 
-	  			<li><img src="img/section2.png" alt=""></li>
+	  			<li>
+	  				<div class="btn_wrap01">
+	  					
+	  					<div class="btn01"><a href="	#">자세히보기 ▶</a></div>
+	  					
+	  				<img src="img/section2.png" alt="">
+
+	  			</li>
 	  					  			
 	  			<li class="icon">
 	  				<h2>HOT LINK</h2>
@@ -315,9 +437,41 @@ font-weight:bold;}
 	  				<p>원격지원<br>  시스템</p>
 	  				<p>예산/결산 <br>  공고</p>
 	  			</li>
-	  			<li>
+
+
+	  			<li class="section4">
 	  				
+	  				<h2>공지사항</h2>
+	  				
+
+	  				<ul class="list clearfix">
+
+	  					<li>
+
+	  					<p>· [공지] 한국대학교 웹진..</p><span> 2016-06-12</span>
+	  				</li>
+
+	  				<li>
+	  					<p>· [보도]우수대학교 선정 수상</p><span> 2016-06-17</span>
+	  				</li> 
+
+	  				<li>
+	  					<p>· [공지]대학입시 설명회</p><span> 2016-06-05</span>
+	  				</li>
+
+	  				<li>
+	  					<p>· [공지]2016년 1학기 성적..</p><span> 2016-06-14</span>
+	  				</li>
+
+	  				
+
+	  				</ul>
+
+                  
 	  			</li>
+
+
+
 	  			<li class=content5>
 	  				<p>SNS NEWS<p>
 
@@ -344,14 +498,36 @@ font-weight:bold;}
 	  			</li>
 
 	  		
-	  			<li><img src="img/section7.png" alt=""></li>
+	  			<li><img src="img/section7.png" alt="">
+
+
+
+	  			</li>
 
 	  			<li class="section8">
 	  				<div class="slider2">
-	  				<div><img src="img/last.png" alt=""></div>
-	  				<div><img src="img/last.png" alt=""></div>
-	  				<div><img src="img/last.png" alt=""></div>
-	  				<div><img src="img/last.png" alt=""></div>
+
+	  				<div class="btn_wrap02">
+	  					<div class="btn02"><a href="#">입학사전예약 ▶</a>	</div>
+
+	  					<img src="img/last.png" alt="">
+	  				</div>
+	  				<div class="btn_wrap02">
+	  					<div class="btn02"><a href="#">입학사전예약 ▶</a>	</div>
+
+	  					<img src="img/last.png" alt="">
+	  				</div>
+	  				<div class="btn_wrap02">
+	  					<div class="btn02"><a href="#">입학사전예약 ▶</a>	</div>
+
+	  					<img src="img/last.png" alt="">
+	  				</div>
+	  				<div class="btn_wrap02">
+	  					<div class="btn02"><a href="#">입학사전예약 ▶</a>	</div>
+
+	  					<img src="img/last.png" alt="">
+	  				</div>
+	  				
 	  				</div>
 	  			</li>
 	  		</ul>
@@ -360,20 +536,66 @@ font-weight:bold;}
 
 	<!-- bottom -->
 
-	<div class="bottom_wrap">
+	
 
 		<div class="bottom">
-			
+
+			<!-- box1 -->
 			<div class="box">
 				<ul clasas="clearfix">
-					<li>학사일정</li>
-					<li>< 2016 07 ></li>
+					<li class="title01">학사일정</li>
+					
+					<li class="day"> 2016 07 </li>
+
+					<div class="one"> < </div>
+					<div class="two"> > </div>
 				</ul>
+				
 			</div>
 
-			<div class="box2"></div>
+			<!-- box2 -->
+
+
+			<div class="box2">
+			<div class="slider_wrap">
+
+				<div class="clearfix">
+					<li class="title">2016-1학기 성적 열람 및 상담 신청</li>
+					<li class="subject">성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이</li>
+				</div>
+
+
+				<div>
+					<li class="title">2016-2학기
+					장학금 신청</li>
+					<li class="subject"> 장학금신청은 해당 조건에 부합하는 학생들만 신청이
+					가능합니다</li>
+				</div>
+
+
+			</div>
+
+			<div class="top_button"><a href="#">
+				
+			<img src="img/topbutton.png" alt="">
+			</a></div>
+
+			<div class="bottom_button"><a href="#">
+				
+			<img src="img/bottom_button.png" alt="">
+			</a></div>
+
+
+
+			</div>
+
+
 		</div>
-		</div>
+
+
+
+
+		
 	
 
 
