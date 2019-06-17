@@ -88,5 +88,47 @@ function inputCar3(){
 		// dbj.b(100)
 
 	</script>
+
+
+	<div id="carname"></div>
+	<div id="carcolor"></div>
+	<div id="carspeed"></div>
+
+	<script>
+		var yourCar = {
+			name:'sonata',
+			speed:50,
+			color:'white',
+			start:function(x){
+				return this.speed + x;
+			}
+		}
+
+		yourCar.name;
+		yourCar.color;
+
+		yourCar.start();
+
+		document.getElementById("carname").innerHTML = yourCar.name;
+		document.getElementById("carcolor").innerHTML = yourCar.color;
+		document.getElementById("carspeed").innerHTML = yourCar.start(200);
+
+		var backColor = ["blue","red","white"];
+
+
+		var docBody = document.getElementsByTagName("body")[0];
+
+
+		function backColorBlue(x){
+
+
+		
+		docBody.style.backgroundColor = backColor[x];
+		}
+	</script>
+
+	<button type="button" onclick="backColorBlue(0)">파란색</button>
+	<button type="button" onclick="backColorBlue(1)">빨간색</button>
+	<button type="button" onclick="backColorBlue(2)">되돌리기</button>
 </body>
 </html>
