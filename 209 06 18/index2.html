@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+
+	<style>
+		.box_wrap{width: 300px; height: 300px; background-color:yellow;
+		 overflow:hidden;
+
+			position: absolute; 
+			left: 50%; top: 50%;
+			transform:translate(-50%,-50%);}
+
+
+			.box_wrap div{transition:.3s}
+
+
+		.box1{width: 100px; height: 100px; 
+			background-color:orange;
+			position: absolute;
+
+			transform:translate(250px,250px)
+
+			rotate(45deg);
+		}
+
+
+
+
+		.box2{width: 100px; height: 100px; 
+			background-color:orange;
+			position: absolute;
+
+			transform:translate(250px,-50px)
+
+			rotate(45deg);
+		}
+
+
+		.box3{width: 100px; height: 100px; 
+			background-color:orange;
+			position: absolute;
+
+			transform:translate(-50px,-50px)
+
+			rotate(45deg);
+		}
+
+
+		.box4{width: 100px; height: 100px; 
+			background-color:orange;
+			position: absolute;
+
+			transform:translate(-50px,250px)
+
+			rotate(45deg);
+		}
+
+		.box_wrap:hover .box1{transform:translate(300px,300px) rotate(45deg)}
+		.box_wrap:hover .box2{transform:translate(300px,-100px) rotate(45deg)}
+		.box_wrap:hover .box3{transform:translate(-100px,-100px) rotate(45deg)}
+		.box_wrap:hover .box4{transform:translate(-100px,300px) rotate(45deg)}
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+
+<body>
+	<div class="box_wrap">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+	</div>
+</body>
+</html>
