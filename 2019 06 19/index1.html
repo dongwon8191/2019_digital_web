@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<style>
+		.box{width: 100px; height: 100px;
+		 background-color:red;
+		 position: absolute; bottom: 0;
+		 border-radius:50px;
+		 animation:boxmove 2s linear
+		  ;
+
+		  animation-iteration-count:
+		
+		
+		}
+
+
+		@keyframes boxmove{
+			0%{left: 0;}
+			50%{left: 300px;}
+			100%{left: 0;}
+		}
+
+
+		.box01{width: 200px; height: 10px; 
+			background-color: blue;
+			animation:lines 2s;}
+
+
+			@keyframes lines{
+				from{width: 0; }
+				to{width: 200px; }
+			}
+
+
+			.box02{width: 0px; height: 10px;
+				background-color:skyblue;
+				animation:lines2 2s linear;
+				animation-delay:2s;
+				animation-fill-mode:forwards;
+				position: absolute; left: 200px; top: 8px; }
+
+
+				@keyframes lines2{
+					from{width: 0;}
+					to{width: 200px;}
+
+
+				}
+
+
+				.button{width: 200px; height: 40px; line-height: 40px;
+				        background-color:orange;
+				        text-align: center; position: relative; }
+
+				        .bar{width: 200px; height: 5px;
+				        	position: absolute;
+				        	bottom: 0;
+				        	background-color:#f00;
+				        	animation:btnBar 0.8s;
+				        	animation-play-state:paused;}
+
+
+				        	@keyframes btnBar{
+				        		from{width: 0;}
+				        		to{width: 200px;}
+				        	}
+
+
+				        	.button:hover .bar{
+				        		animation-play-state:running;
+				        	}
+
+
+				        	.button1{width: 200px; height: 40px;
+				        		background-color:skyblue;
+				        		line-height: 40px;
+				        		text-align: center; position: relative;}
+
+				        		.bar1{width:0px; height: 5px;
+				        			background-color:#f00; position: absolute;
+				        			transition:0.3s;
+				        			bottom: 0;}
+
+				        			.button1:hover .bar1{width: 200px; }
+
+
+
+
+
+				        				.button2{width: 200px; height: 40px;
+				        		background-color:skyblue;
+				        		line-height: 40px;
+				        		text-align: center; position: relative;}
+
+
+
+				        		.bar2{width:200px; height: 5px;
+				        			background-color:#f00; position: absolute;
+				        			transition:0.3s;
+				        			bottom: 0;
+				        			transform:scale(0);
+				        			transition:}
+
+				        			.button2:hover .bar2{transform:scaleX(1);}
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box01"></div>
+	<div class="box02"></div>
+
+
+	<div class="button">
+		안녕하세요
+		<div class="bar"></div>
+	</div>
+
+
+	<div class="button1">
+		안녕하세요
+		<div class="bar1"></div>
+	</div>
+
+
+	<div class="button2">
+		안녕하세요
+		<div class="bar2"></div>
+	</div>
+</body>
+</html>
