@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+CTYPE html>
 <html lang="ko">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/reset.css">
 
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<title>한국대학교</title>
@@ -191,17 +191,7 @@ left: 50%; top: 50%; position: absolute; top:16px; transform:translate(-50%,-50%
 }
 .wrapper{position: relative;}
 
-.footer_wrapper{ width: 740px; margin:0 auto;}
-.footer{ height: 165px; position: relative; }
-.footer>ul.footer_menu{margin:0 auto;padding-left:637px;}
-.footer>ul.footer_menu>li{float: left; position: relative;}
-.footer>ul.footer_menu>li:after{content:""; display: block; width: 1px; height: 10px; background-color: #000; position: absolute;top: 27px;}
-.footer>ul.footer_menu>li:first-child:after{content:"";display: none;}
-.footer>ul.footer_menu>li>a{display: block; text-align: center; padding:20px 13px; font-size:1em; font-weight: bold;}
-.footer>.footer_text>p{ margin-left:650px; color:#9c9c9c;}
-.footer>.footer_text{position: absolute; bottom: 20px;}
-.footer_text>h4{text-align: center; margin-left:287px; padding-top:10px; color:#9c9c9c;
-font-weight:bold;}
+
 
 .bottom{position: relative;  }
 .bottom_wrap{width: 1200px; margin:0 auto;}
@@ -237,8 +227,8 @@ font-weight:bold;}
 
 
 
-.section4>ul.list>li{margin-top:50px; font-size:0.9em; color:white; /*list-style:square;*/}
-.section4>ul.list>li>p{float: left; padding-left:15px; padding-top:5px;}
+.section4>ul.list>li{margin-top:30px; font-size:0.9em; color:white; /*list-style:square;*/}
+.section4>ul.list>li>p{float: left; padding-left:15px; padding-top:8px;}
 .section4>ul{position: relative;}
 .section4>ul.list:before{content:"";display: block;width: 250px; border: 1px solid #fff; position: absolute;left: 20px; bottom: 120px;}
 .section4>ul.list>li>span{float:right;padding-right:10px; padding-top: 5px;}
@@ -344,6 +334,54 @@ header#main_header>.header_top_wrap>.header_top>.util_menu2>li.size>a>img{displa
 .header_bottom>.main_menu>li{float: left; }
 .header_bottom>.main_menu>li>a{ display: block; padding:0 20px; 
    	color:#787878; font-weight: bold; line-height:120px;}
+
+
+
+   	/*footer*/
+
+   	.content_wrapper>ul.section>li:nth-child(8)>.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    top: 0;
+    right: 0;
+  
+    width: 100%;
+}
+
+	.content_wrapper>ul.section>li:nth-child(8)>.bx-wrapper .bx-pager {
+    text-align: right;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+    padding-right:30px;
+
+}
+
+.content_wrapper>ul.section>li:nth-child(8)>.bx-wrapper .bx-pager.bx-default-pager a {
+    text-indent: -9999px;
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+.footer_wrap{width: 1200px; margin:0 auto; padding-bottom:30px;}
+.footer_wrap>.logo_Box{width: 300px; float: left;}
+.footer{width: 900px;float: right; padding-top:20px; }
+.footer>ul.footer_menu{position: relative;}
+.footer>ul.footer_menu>li{float: left;}
+.footer>ul.footer_menu>li:after{content:""; display: block; width: 1px; height: 10px; background-color: #000; position: absolute; top: 7px;  margin-left:-5px; }
+.footer>ul.footer_menu>li:first-child:after{content:"";display: none;}
+.footer>ul.footer_menu>li>a{display: block; padding-right:25px;}
+.footer_text{padding-top:15px;}
+.footer_text>p{color:#9c9c9c; padding:2px 0; font-size:0.8em;}
+.footer_text>h4{color:#9c9c9c; padding-top:10px; font-size:0.8em;}
    	
 
 
@@ -778,6 +816,7 @@ header#main_header>.header_top_wrap>.header_top>.util_menu2>li.size>a>img{displa
 	
 
 	<div class="footer_wrap">
+		<div class="logo_Box"></div>
 		<div class="footer">
 			<ul class=" footer_menu clearfix">
 				<li><a href="#">회사소개</a></li>
