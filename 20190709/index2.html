@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+
+	<link rel="stylesheet" href="../css/reset.css">
+</head>
+
+<style>
+	.container{height: 730px;
+	          background:url(img/contentsbg01.jpg) no-repeat center fixed;
+	          background-size:cover;}
+
+	.container .section{width: 1260px; margin:0 auto; padding-top:70px;}
+	
+	.section > h4{text-align: center; color:white;} 
+	.section > h4:after{content:""; display: block;
+width: 50px; height: 3px; background-color:white; margin:30px auto;}         
+	.section > p{text-align: center; color:white;
+		font-size:2em; margin-bottom:70px;}
+
+
+		.section ul{}          
+		.section ul li{float: left; margin-right:20px;}
+		.section ul li:last-child{margin-right:0;} 
+
+		.section .card{width: 300px;height: 380px;
+			_background-color:green; position: relative; transition:0.3s;}
+
+			.section .card:hover{transform:translate(-10px, -10px); box-shadow:8px 8px 10px black;}
+
+		.section .card img{position: absolute;
+			left: 50%; transform:translateX(-50%);
+			top: 70px;}	
+
+		.section .card_body{width: 300px;
+		                    height: 160px;
+		                    position: absolute;
+		                    bottom: 0; text-align: center;
+		                    color:white; padding:0 20px;}	         
+
+
+
+
+
+</style>
+<body>
+	<div class="container">
+
+	<div class="section">
+		<h4>비전</h4>
+		<p>vision 2020</p>
+
+
+		<ul class="clearfix">
+			<li>
+				<div class="card">
+					<img src="img/banner_icon01_01.png" alt="">
+					<div class="card_body">
+						<h3>fff</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, iste.</p>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="card">
+					<img src="img/banner_icon01_02.png" alt="">
+					<div class="card_body">
+						<h3>fff</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, iste.</p>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="card">
+					<img src="img/banner_icon01_03.png" alt="">
+					<div class="card_body">
+						<h3>fff</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, iste.</p>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="card">
+					<img src="img/banner_icon01_04.png" alt="">
+					<div class="card_body">
+						<h3>fff</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, iste.</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	</div>
+</body>
+</html>

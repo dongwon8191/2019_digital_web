@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- meta:vp -->
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		img{width: 100%;}
+		ul{width: 100%; margin:0 auto; }
+		li{float: left; width: 25%;}
+		/*div{height: 100px; background-color: skyblue; margin-bottom:10px;}
+	.box01{max-width:600px; overflow:hidden;}
+	.box01>img{max-width:600px;width: 100%;}
+	.box02{min-width:600px;} 
+	.box02>img{min-width:600px; width: 100%;}*/
+
+
+	@media screen and (max-width:576px){
+		html{background-color:red;}
+		li{width: 50%;}
+	}
+
+
+	@media screen and (min-width:577px) and (max-width:949px){
+		html{background-color:pink;}
+		li{width: 33.333%;}
+		/*li:last-child{display: none;}*/
+		li.del{display: none;}
+	}
+
+
+
+	@media screen and (min-width:950px){
+		html{background-color:black;}
+	} 
+
+
+
+
+	</style>
+</head>
+<body>
+<!-- 	<div class="box01">
+		<img src="../images/testimg.jpg" alt="">
+	</div>
+	<div class="box02"><img src="../images/testimg.jpg" alt=""></div>
+
+	 -->
+
+
+	 <ul class="clearfix">
+	 	<li><img src="../images/testimg.jpg" alt=""></li>
+	 	<li><img src="../images/testimg.jpg" alt=""></li>
+	 	<li class="del"><img src="../images/testimg.jpg" alt=""></li>
+	 	<li><img src="../images/testimg.jpg" alt=""></li>
+	 </ul>
+	
+</body>
+</html>
