@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hide").click(function(){
+				$("p").hide();
+
+			});
+
+			$(".show").click(function(){
+				$("p").show();
+
+			});
+
+
+
+		});
+
+	</script>
+
+	<style>
+		div.hide{width: 100px;
+			line-height:40px;
+			text-align: center;
+			background-color:skyblue;
+			 }
+	</style>
+</head>
+<body>
+	<p>제이쿼리 study</p>
+
+
+	<a href="javascript:void(0)" class="hide">삭제</a>
+	<a href="#" class="show">보이기</a>
+
+	<div class="hide">삭제</div>
+	<div class="show">보이기</div>
+
+
+	<style>
+		*{padding:0; margin:0; }
+		li{list-style:none;}
+		.clearfix:after{content:""; display: block; clear: both;}
+
+		ul{width: 300px; }
+		  ul > li{float: left; width: 100px; text-align: center; 
+		  	line-height:30px; }
+
+		  	 ul > li:nth-child(2n){background-color:skyblue;}
+
+		  	.box1,.box2,.box3{width: 300px; height: 150px; border: 1px solid #000;}
+
+
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$(".box2,.box3").hide();
+
+			$("ul>li").eq(0).click(function(){
+				$(".box1").show();
+				$(".box2").hide();
+				$(".box3").hide();
+
+			});
+
+
+			$("ul>li").eq(1).click(function(){
+				$(".box1").hide();
+				$(".box2").show();
+				$(".box3").hide();
+
+			});
+
+
+
+			$("ul>li").eq(2).click(function(){
+				$(".box1").hide();
+				$(".box2").hide();
+				$(".box3").show();
+
+			});
+
+
+		});
+	</script>
+
+	<ul class="clearfix">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+	</ul>
+
+	<!-- div.box$*3>lorem10 -->
+	<div class="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, repudiandae?</div>
+	<div class="box2">Exercitationem vitae officia ipsum quas minus reprehenderit, dolores numquam molestiae.</div>
+	<div class="box3">Voluptates consequuntur mollitia natus hic rerum laudantium recusandae perferendis tempora.</div>
+
+
+<!-- 
+	<button class="hide">삭제</button>
+	<button class="show">보이기</button> -->
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+
+	<style>
+		.tapWrap{width: 500px;}
+		.tabWrap>ul>li{width: 130px; height: 80px;  color:white;}
+
+		.tabWrap>ul>li:nth-child(1){background-color:#006599;}
+
+		.tabWrap>ul>li:nth-child(2){background-color:#006599;}
+		.tabWrap>ul>li:nth-child(3){background-color:#0099cb;}
+		.tabWrap>ul>li:nth-child(4){background-color:#0099cb;}
+
+		.tabWrap ul li.active{
+			background-color:white; color:black;
+		}
+
+		.boxWrap > div{display: block;}
+
+		.tabWrap{position: relative;}
+
+		
+
+		.boxWrap{position: absolute;left: 200px; top: 0;}
+
+
+		.f_box>ul>li.golo_box{
+ 				padding-top:25px;
+ 				/*padding-left:15px;
+*/
+ 				width: 280px; margin:0 auto;
+ 			}
+
+
+ 			.f_box label{display: block; margin: 
+ 			 font-size:0.9em;
+ 			 font-weight:bold;}
+ 			.f_box select#golo{
+ 				width: 275px; height: 30px;
+ 			    font-size:0.8em; color:#c4c4c4; font-weight: bold;
+ 			text-align: center;
+ 		border: 1px solid #d7d4d4; border-radius:5px;}
+
+
+.form_box>.f_box>ul{
+	position: relative;
+}
+ 			
+ 			.f_cell1{
+ 				position: absolute; top: 140px; left: 35px;
+ 			}
+
+
+
+ 			.f_box>ul>li.f_cell{width: 280px; margin:0 auto;
+ 				padding-top:15px;}
+ 			.f_box>ul>li.f_cell>.cleft{width: 50%;float: left;
+ 			 }
+
+ 			.f_box>ul>li.f_cell>.cright{width: 50%;float: right;}
+ 			
+ 			.f_box>ul>li.f_cell1{width: 280px; margin:0 auto;
+ 				padding-top:15px;}
+ 			.f_box>ul>li.f_cell1>.cleft{width: 50%;float: left; }
+
+ 			.f_box>ul>li.f_cell1>.cright{width: 50%;float: right;}
+ 			
+
+ 			.f_box>ul>li.f_cell>.cleft>input#sdate{ text-align: center;
+ 				width: 130px; height: 30px; 
+ 				 border: 1px solid #d7d4d4;border-radius:5px;
+ 				 color: #c3c3c3; font-weight:bold;
+ 			}
+ 			.f_box>ul>li.f_cell>.cright>input#edate{text-align: center;
+ 				width: 130px; height: 30px;
+ 			border: 1px solid #d7d4d4; border-radius:5px;
+ 		color: #c3c3c3; font-weight:bold;}
+
+ 			.f_box>ul>li.f_cell1>.cleft>select#cgrade{
+ 				width: 120px; height: 30px; border: 1px solid #d7d4d4;
+ 				border-radius:5px; color: #c3c3c3; font-weight:bold;
+ 			}
+
+
+
+
+
+ 			.cright>.numm>.left>input#num{ text-align: center;
+ 				width: 60px;height: 30px;
+ 				
+ 			}
+
+ 			.cright>.numm>.right>input#num{text-align: center;
+ 				width: 60px;height: 30px;
+ 				
+ 			}
+
+
+
+
+ 			.numm{width: 130px;}
+
+
+ 			.numm>.left{float: left;}
+ 			.numm>.left>input#num{border: 1px solid #d7d4d4;
+ 				border-radius:5px; color: #c3c3c3; 
+ 			}
+
+ 			.numm>.right{float:right;}
+ 			.numm>.right>input#num{border: 1px solid #d7d4d4;
+ 				border-radius:5px; color: #c3c3c3; 
+ 			}
+
+ 			.btn{
+ 				position: relative;
+ 			}
+
+ 			.btn>button{width: 278px; height: 40px;
+ 				background-color: #ea4f1f;
+ 				position: absolute;
+ 				left: 30px; top: 140px; border-radius:5px;
+ 				color:white; font-size:1em;
+ 				font-weight:bold;
+ 			}
+
+
+ 			.btn{
+ 				position: relative;
+ 			}
+
+
+ 			.btn>img{position: absolute;
+ 			 top: 148px; left: 110px;}
+
+
+
+
+
+
+		
+
+		
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$(".boxWrap > div").hide();
+			$(".boxWrap > div").eq(0).fadeIn();
+
+			$(".tabWrap > ul > li").click(function(){
+				var liNum = $(this).index();
+				$(".tabWrap > ul > li").removeClass();
+				$(this).addClass("active");
+				$(".boxWrap > div").hide();
+				$(".boxWrap > div").eq(liNum).fadeIn();
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="tabWrap">
+		<ul class="tab clearfix" >
+			<li class="active">호텔예약</li>
+			<li>항공예약</li>
+			<li>렌트카</li>
+			<li>휴향지</li>
+		</ul>
+
+		<div class="boxWrap">
+			<div class="box1">
+				<div class="form_box">
+           <form action="" class="f_box">
+          
+
+				<ul>
+					<li class="golo_box">
+						<label for="golo">가고싶은 나라를 선택하세요.</label>
+
+						<select name="nara" id="golo">
+							<option value="">선택하세요</option>
+							<option value="미국">미국</option>
+							<option value="영국">영국</option>
+							<option value="스위스">스위스</option>
+							<option value="이탈리아">이탈리아</option>
+							
+						</select>
+						
+					</li>
+
+
+					<li class="f_cell">
+						<div class="cleft">
+							<label for="sdate">출발일</label>
+							<input type="date" id="sdate">
+
+						</div>
+						<div class="cright">
+							<label for="edate">도착일</label>
+							<input type="date" id="edate">
+						</div>
+					</li>
+
+
+					<li class="f_cell1 clearfix">
+						<div class="cleft">
+							<label for="cgrade">좌석등급</label>
+							<select  id="cgrade">
+								<option value="비지니스">비지니스</option>
+								<option value="이코노미">이코노미</option>
+							</select>
+						</div>
+
+
+
+						<div class="cright clearfix">
+
+					<div class="numm clearfix">
+
+						<div class="left">
+							<label for="num">성인</label>
+							<input type="number" id="num" placeholder="1">
+						</div>
+										
+						
+						<div class="right">
+							<label for="num">아이</label>
+							<input type="number" id="num" placeholder="1">
+						</div>
+
+					</div>
+
+				</div>
+						
+
+					</li>
+
+					<li class="btn">
+						
+						<button>검색하기</button>
+
+							<img src="img/btn_img.png" alt="">
+						
+
+
+					</li>
+
+
+
+
+
+
+
+				</ul>
+			</form>
+
+
+			</div>
+			</div>
+
+
+			<div class="box2">
+				
+				<div class="form_box">
+           <form action="" class="f_box">
+          
+
+				<ul>
+					<li class="golo_box">
+						<label for="golo">가고싶은 나라를 선택하세요2.</label>
+
+						<select name="nara" id="golo">
+							<option value="">선택하세요</option>
+							<option value="미국">미국</option>
+							<option value="영국">영국</option>
+							<option value="스위스">스위스</option>
+							<option value="이탈리아">이탈리아</option>
+							
+						</select>
+						
+					</li>
+
+
+					<li class="f_cell">
+						<div class="cleft">
+							<label for="sdate">출발일</label>
+							<input type="date" id="sdate">
+
+						</div>
+						<div class="cright">
+							<label for="edate">도착일</label>
+							<input type="date" id="edate">
+						</div>
+					</li>
+
+
+					<li class="f_cell1 clearfix">
+						<div class="cleft">
+							<label for="cgrade">좌석등급</label>
+							<select  id="cgrade">
+								<option value="비지니스">비지니스</option>
+								<option value="이코노미">이코노미</option>
+							</select>
+						</div>
+
+
+
+						<div class="cright clearfix">
+
+					<div class="numm clearfix">
+
+						<div class="left">
+							<label for="num">성인</label>
+							<input type="number" id="num" placeholder="1">
+						</div>
+										
+						
+						<div class="right">
+							<label for="num">아이</label>
+							<input type="number" id="num" placeholder="1">
+						</div>
+
+					</div>
+
+				</div>
+						
+
+					</li>
+
+					<li class="btn">
+						
+						<button>검색하기</button>
+
+							<img src="img/btn_img.png" alt="">
+						
+
+
+					</li>
+
+
+
+
+
+
+
+				</ul>
+			</form>
+
+
+			</div>
+
+			</div>
+
+			<div class="box3">
+				
+				<div class="form_box">
+           <form action="" class="f_box">
+          
+
+				<ul>
+					<li class="golo_box">
+						<label for="golo">가고싶은 나라를 선택하세요3.</label>
+
+						<select name="nara" id="golo">
+							<option value="">선택하세요</option>
+							<option value="미국">미국</option>
+							<option value="영국">영국</option>
+							<option value="스위스">스위스</option>
+							<option value="이탈리아">이탈리아</option>
+							
+						</select>
+						
+					</li>
+
+
+					<li class="f_cell">
+						<div class="cleft">
+							<label for="sdate">출발일</label>
+							<input type="date" id="sdate">
+
+						</div>
+						<div class="cright">
+							<label for="edate">도착일</label>
+							<input type="date" id="edate">
+						</div>
+					</li>
+
+
+					<li class="f_cell1 clearfix">
+						<div class="cleft">
+							<label for="cgrade">좌석등급</label>
+							<select  id="cgrade">
+								<option value="비지니스">비지니스</option>
+								<option value="이코노미">이코노미</option>
+							</select>
+						</div>
+
+
+
+						<div class="cright clearfix">
+
+					<div class="numm clearfix">
+
+						<div class="left">
+							<label for="num">성인</label>
+							<input type="number" id="num" placeholder="1">
+						</div>
+										
+						
+						<div class="right">
+							<label for="num">아이</label>
+							<input type="number" id="num" placeholder="1">
+						</div>
+
+					</div>
+
+				</div>
+						
+
+					</li>
+
+					<li class="btn">
+						
+						<button>검색하기</button>
+
+							<img src="img/btn_img.png" alt="">
+						
+
+
+					</li>
+
+
+
+
+
+
+
+				</ul>
+			</form>
+
+
+			</div>
+			</div>
+			<div class="box4">
+				
+				<div class="form_box">
+           <form action="" class="f_box">
+          
+
+				<ul>
+					<li class="golo_box">
+						<label for="golo">가고싶은 나라를 선택하세요4.</label>
+
+						<select name="nara" id="golo">
+							<option value="">선택하세요</option>
+							<option value="미국">미국</option>
+							<option value="영국">영국</option>
+							<option value="스위스">스위스</option>
+							<option value="이탈리아">이탈리아</option>
+							
+						</select>
+						
+					</li>
+
+
+					<li class="f_cell">
+						<div class="cleft">
+							<label for="sdate">출발일</label>
+							<input type="date" id="sdate">
+
+						</div>
+						<div class="cright">
+							<label for="edate">도착일</label>
+							<input type="date" id="edate">
+						</div>
+					</li>
+
+
+					<li class="f_cell1 clearfix">
+						<div class="cleft">
+							<label for="cgrade">좌석등급</label>
+							<select  id="cgrade">
+								<option value="비지니스">비지니스</option>
+								<option value="이코노미">이코노미</option>
+							</select>
+						</div>
+
+
+
+						<div class="cright clearfix">
+
+					<div class="numm clearfix">
+
+						<div class="left">
+							<label for="num">성인</label>
+							<input type="number" id="num" placeholder="1">
+						</div>
+										
+						
+						<div class="right">
+							<label for="num">아이</label>
+							<input type="number" id="num" placeholder="1">
+						</div>
+
+					</div>
+
+				</div>
+						
+
+					</li>
+
+					<li class="btn">
+						
+						<button>검색하기</button>
+
+							<img src="img/btn_img.png" alt="">
+						
+
+
+					</li>
+
+
+
+
+
+
+
+				</ul>
+			</form>
+
+
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
