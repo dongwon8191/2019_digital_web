@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<title>tab</title>
+
+	<style>
+		.content_wrap{width: 1000px; margin:20px auto;}
+		.content_wrap ul{}
+		/*.content_wrap ul li{float: left; w100/6 %로 계산 100퍼센트보다 작게  }*/
+		.content_wrap ul li{float: left; width: 16.66%;
+		                    height: 40px; line-height: 40px; 
+		                    text-align: center; border-radius:20px;
+		                    cursor:pointer;}
+
+		.content_wrap ul li:hover{background-color:skyblue;}
+		.content_wrap li.active{background-color:orange; color:white;} 
+
+
+		.content_wrap div.content_txt{border: 1px solid #cdcdcd;} 
+
+
+		.content_wrap div.content_txt div{padding:30px; display: none;}                
+		.content_wrap div.content_txt div:nth-child(1){display: block;}
+
+	</style>
+
+	<script>
+		$(document).ready(function(){
+
+			$(".content_wrap ul li").click(function(){
+				var liNum = $(this).index();
+				console.log(liNum);
+
+				$(".content_wrap > ul > li").removeClass();
+				$(this).addClass("active");
+
+				$(".content_txt > div").hide();
+				$(".content_txt > div").eq(liNum).fadeIn();
+
+				// =$(".content_txt > div:eq(n)").fadeIn();
+				// =$(".content_txt > div:eq("+liNum+")").fadeIn();
+			});
+
+		});
+	</script>
+</head>
+<body>
+
+	<div class="content_wrap">
+		<ul class="clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+			<li>menu6</li>
+		</ul>
+
+		<div class="content_txt">
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, qui soluta? Magnam facere consequuntur dignissimos, modi, rem esse animi tenetur adipisci, laboriosam tempora enim ad explicabo soluta officiis reprehenderit cumque.</div>
+			<div>Quas laboriosam incidunt, ratione nihil laborum dolorum quam recusandae totam repudiandae praesentium officia asperiores rem provident, dolore vero consequatur ipsam reiciendis. Dolorum officiis necessitatibus voluptas quasi, dignissimos sit magnam nisi!</div>
+			<div>Saepe nostrum odit optio modi sapiente ea recusandae ut repellat nisi? Ducimus, facilis quibusdam doloremque ab? Officiis illum, praesentium excepturi debitis amet officia, quisquam nam est ad. Adipisci, doloribus, quaerat.</div>
+			<div>Ullam eos nulla hic in architecto maxime asperiores facilis! Voluptatem repellendus quibusdam, laboriosam, eius nisi tempore necessitatibus expedita ab minima officia perspiciatis reiciendis ipsa quisquam reprehenderit alias, natus doloremque eaque!</div>
+			<div>Tempore quasi voluptatem possimus impedit, necessitatibus. Provident illum qui placeat at odit similique, voluptates assumenda natus itaque veniam nesciunt minima necessitatibus reiciendis dolorum impedit. Dolore sapiente illo, corrupti quaerat eaque.</div>
+			<div>Nisi sint dolorum praesentium quas iure soluta iusto, recusandae, minus ab enim magnam vel! Assumenda dolorem blanditiis eum, facere autem, sint perferendis dolores, et temporibus, molestiae vel hic deserunt atque.</div>
+		</div>
+	</div>
+
+	<!-- <style>
+
+		.wrapper{width: 522px; margin:0 auto;}
+		.wrapper ul li{float: left; width: 123px; height: 40px; margin-right:10px;
+		}
+		.wrapper ul li:last-child{margin-right:0;}
+
+	</style> -->
+
+	<script>
+
+		// var viewImg = [
+		// "img/spring.jpg",
+		// "img/summer.jpg",
+		// "img/fall.jpg",
+		// "img/winter.jpg"]; //viewImg[0]
+
+		// $(document).ready(function(){
+
+
+		// 	$(".wrapper > ul > li").click(function(){
+		// 		$(".image>img").attr("src",viewImg[$(this).index()]);
+				//$(".image>img").attr("src",배열변수 인덱스값)
+
+		// 	=
+		// });$(".wrapper > ul > li").click(function(){
+		// 		var num = $(this).index()
+		// 		$(".image>img").attr("src",viewImg[num]);
+				//$(".image>img").attr("src",배열변수 인덱스값)
+
+			// });
+
+
+		
+
+			// $(."wrapper > ul > li:eq(0)").click(function(e){
+
+			// 	// $(".image > img").attr(속성,속성값)/set attr("속성")/get;
+			// 	$(".image > img").attr("src","img/spring.jpg");
+			// 	return false;
+			// 	// event.preventfault();
+
+			// }); 
+
+			// $(."wrapper > ul > li:eq(1)").click(function(e){
+
+			// 	// $(".image > img").attr(속성,속성값)/set attr("속성")/get;
+			// 	$(".image > img").attr("src","img/summer.jpg");
+			// 	return false;
+
+			// }); 
+
+
+   //          $(."wrapper > ul > li:eq(2)").click(function(e){
+
+			// 	// $(".image > img").attr(속성,속성값)/set attr("속성")/get;
+			// 	$(".image > img").attr("src","img/fall.jpg");
+			// 	return false;
+
+			// }); 
+
+
+   //          $(."wrapper > ul > li:eq(3)").click(function(e){
+
+			// 	// $(".image > img").attr(속성,속성값)/set attr("속성")/get;
+			// 	$(".image > img").attr("src","img/winter.jpg");
+			// 	return false;
+
+			// }); 
+
+
+		//});
+	</script>
+
+	<!-- <div class="wrapper"> -->
+		<!-- <ul>
+			<li><a href="#"><img src="img/btn1_1.jpg" alt="봄"></a></li>
+			<li><a href="#"><img src="img/btn2_1.jpg" alt="여름"></a></li>
+			<li><a href="#"><img src="img/btn3_1.jpg" alt="가을"></a></li>
+			<li><a href="#"><img src="img/btn4_1.jpg" alt="겨울"></a></li>
+		</ul>
+		<div class="image">
+			<img src="img/spring.jpg" alt="봄">
+		</div>
+	</div> -->
+	
+</body>
+</html>
