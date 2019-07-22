@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+
+
+
+	
+
+	<style>
+		.tab_wrap{width: 1000px; margin:0 auto; margin-top:100px;}
+		.tab_wrap>ul{}
+		.tab_wrap>ul>li{float: left; width: 20%; line-height: 60px; 
+			text-align: center; border-radius:20px 20px 0 0;
+		    background-color:lightgray; color:blue; font-weight: bold; cursor:pointer;
+		   }
+		.tab_wrap>ul>li:hover{ background-color:gray; }
+
+		.tab_wrap>ul>li.active{background-color:skyblue; color:black;}
+
+		.box_wrap > div{display: none;}
+
+
+		.box_wrap{width: 1000px; position: absolute; text-align: center; border: 1px solid blue; border-top:none;}
+		.box_wrap > div{padding-top:15px; padding-bottom:15px;}
+		
+
+
+
+
+
+
+	</style>
+
+<script>
+		$(document).ready(function(){
+			$(".box_wrap > div").hide();
+			$(".box_wrap > div").eq(0).show();
+
+			$(".tab_wrap > ul > li").click(function(){
+
+				var liNum = $(this).index();
+				console.log(liNum);
+
+				$(".tab_wrap > ul > li").removeClass();
+				$(this).addClass("active");
+
+				$(".box_wrap > div").hide();
+				$(".box_wrap > div").eq(liNum).show();
+
+			});
+
+			var i = $(this).index();
+
+			function move(){
+					move =i * 1000 *-1; 
+					
+					
+					
+				
+
+					$(".box_wrap > div").stop().animate({left:move},300);   //animate({cssaud:value},speed);
+
+				}
+		});
+	</script>
+
+
+</head>
+<body>
+	<div class="tab_wrap">
+		<ul class="clearfix">
+			<li class="active">Today</li>
+			<li>Story</li>
+			<li>Life</li>
+			<li>Twitter</li>
+			<li>Game</li>
+		</ul>
+	</div>
+
+	<div class="box_wrap">
+		<div class="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iste cumque enim sequi odio praesentium nihil quis corrupti aliquid a deleniti laudantium, voluptatibus ipsum. Quidem, nostrum perferendis? Nostrum iste similique expedita excepturi alias voluptate quod! Facilis cupiditate neque, doloribus dolore sunt minus cum accusamus animi laboriosam quibusdam consectetur, laudantium mollitia, magnam ipsum, porro ratione. Aspernatur et voluptatibus quasi rerum, dolore recusandae nisi nesciunt! Ut autem, quisquam, necessitatibus eos vero quasi fugiat est debitis ab nulla dicta voluptates quos magni quibusdam. Corporis sit nihil cumque velit reiciendis harum mollitia, molestias ipsa laudantium quibusdam reprehenderit praesentium eius dolor labore porro vitae voluptates.</div>
+		<div class="box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nesciunt possimus, at ullam, vitae aperiam voluptatum ut temporibus et repellat quo molestias officia veritatis ratione perspiciatis itaque necessitatibus eius autem. Quibusdam inventore consectetur culpa, numquam ut sequi placeat voluptates excepturi, corporis alias eius aliquam. Cupiditate, ducimus, mollitia. Nisi dolor maxime expedita itaque sapiente sint aut quasi exercitationem, minima velit non numquam incidunt, obcaecati in facilis, commodi magnam iusto excepturi ducimus pariatur fugit. Ea quam maiores itaque dolore id nesciunt odio iure, cumque perspiciatis quos modi consectetur ipsam hic nam autem ipsum officia reiciendis adipisci. Minus veritatis enim tempore repudiandae asperiores?</div>
+		<div class="box3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ipsa, ad rem possimus laboriosam officiis deleniti debitis, aperiam obcaecati eum facere. Debitis corporis voluptatum quae, earum libero, praesentium necessitatibus consequatur accusantium labore fuga iste illum numquam tenetur officiis, fugiat, odit adipisci illo voluptates eaque modi dignissimos. Atque in quo suscipit itaque culpa repellat quibusdam distinctio perferendis nulla fuga ratione eum ea, ab porro sunt odit cupiditate voluptate accusantium libero architecto consequatur ipsum necessitatibus unde! Aut, quasi temporibus quisquam voluptate, itaque perferendis quia nam pariatur consequatur libero qui blanditiis illum, id harum consectetur. Nobis, ipsa similique sunt aliquam repudiandae hic illo.</div>
+		<div class="box4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem assumenda ipsam modi iusto facilis saepe! Ab molestias optio nesciunt, impedit tempora et ea incidunt velit error illum enim rerum a dolore sint dolores harum eaque exercitationem illo aperiam cupiditate fugit similique beatae, quibusdam ullam! Architecto, suscipit ipsam, temporibus consequuntur est assumenda commodi optio distinctio reiciendis obcaecati reprehenderit necessitatibus corporis omnis autem minima dolorum deserunt quo ab, similique quia nihil error at. Eaque atque consectetur nihil a hic nesciunt modi distinctio tempore, ad nam ducimus doloribus dignissimos repellendus ipsam, delectus, incidunt quas animi! Error, voluptates voluptatum vel. Error laborum modi, molestias.</div>
+		<div class="box5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat dolorem quam incidunt voluptates itaque illo nam modi quibusdam distinctio culpa. Reprehenderit nisi ullam mollitia consectetur neque, repellat iusto animi impedit nam est suscipit voluptatibus magni, at! Exercitationem atque, tempora esse amet quisquam eius labore, cupiditate accusantium suscipit ducimus perspiciatis doloribus cum ut sint culpa rem quibusdam recusandae iure nam blanditiis expedita optio ullam. Molestiae minima voluptatum necessitatibus nostrum inventore quidem id beatae architecto adipisci nesciunt quas in cumque a accusantium fuga, debitis, vero ea quam corrupti. Ea tenetur, quaerat est et neque error dignissimos dolor tempora laborum, asperiores, esse cumque?</div>
+	</div>
+</body>
+</html>
