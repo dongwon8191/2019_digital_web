@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+
+	<script src="../js/jquery-3.3.1.min.js"></script>
+
+	<style>
+		.header{width: 1000px; height: 35px; margin:0 auto;  margin-top:20px; position: relative; }
+		.header>img{display: block; float: left; width: 20%; height: 35px;}
+		.header>ul{ height: 35px; background-color:#2c2d31; float: right; width: 80%;}
+		.header>ul>li{float: left; height: 35px; width: 100px;  background-color: #2c2d31; color:white;
+		  text-align: center; border-right: 1px solid #000;  line-height:30px; font-weight:bold;}
+
+		.header>ul>li>img{display: block; }
+
+		.header>ul>li:hover{background-color:white; color:black; cursor:pointer;}
+
+		.header>ul>li.active{background-color:white; color:black; }
+
+
+		.img_wrap{ padding-top:50px; background-color:#fbfbfb;}
+		ul{}
+		ul>li{float: left; padding-right:30px;}
+		ul>li:last-child{padding-right:0;}
+		ul>li>img{display: block; }
+
+		.img_wrap > div{display: none;}
+
+		.header>.button{display: block; position: absolute; top: 50px; right: 0;}
+	</style>
+
+
+	<script>
+		$(document).ready(function(){
+			$(".img_wrap > div").hide();
+			$(".img_wrap > div").eq(0).show();
+			// $(".img_wrap > div").eq(liNum).show();
+		
+
+			var sCount = $(".img_wrap div").eq(0).find("li").length;
+
+			console.log(sCount);
+			$(".sCount").html(sCount);
+
+			
+
+
+
+			$(".header > ul > li").click(function(){
+				var liNum = $(this).index();
+
+				$(".header > ul > li").removeClass();
+				$(this).addClass("active");
+
+				$(".img_wrap > div").hide();
+				$(".img_wrap > div").eq(liNum).fadeIn();
+
+ sCount = $(".img_wrap div").eq(liNum).find("li").length;
+
+			console.log(sCount);
+			$(".sCount").html(sCount);
+
+
+			});
+
+
+			$(".button").click(function(){
+				$(".img_wrap > div").hide();
+			$(".button").hide();
+				
+				
+			});
+
+			$(".button1").click(function(){
+				$(".img_wrap > div").hide();
+			$(".button1").hide();
+				
+				
+			});
+
+			$(".button2").click(function(){
+				$(".img_wrap > div").hide();
+			$(".button2").hide();
+				
+				
+			});
+
+			$(".button3").click(function(){
+				$(".img_wrap > div").hide();
+			$(".button3").hide();
+				
+				
+			});
+
+
+
+
+		});
+	</script>
+</head>
+<body>	<div class="sCount">y</div>
+	<div class="header">
+		<img src="images/tab_logo.jpg" alt="">
+		<ul class="clearfix">
+			<li class="active">승용</li>
+			<li>견적</li>
+			<li>상담</li>
+			<li>이벤트</li>
+		</ul>
+
+<div class="button">
+				<img src="images/x.jpg" alt="">
+			</div>
+
+		<div class="img_wrap">
+			<div class="img1">
+				<ul class="clearfix">
+					<li><img src="images/car1_01.gif" alt=""></li>
+					<li><img src="images/car1_02.gif" alt=""></li>
+					<li><img src="images/car1_03.gif" alt=""></li>
+					<li><img src="images/car1_04.gif" alt=""></li>
+					<li><img src="images/car1_05.gif" alt=""></li>
+					<li><img src="images/car1_06.gif" alt=""></li>
+
+
+							
+				</ul>
+			</div>
+
+			<div class="img2">
+				<ul class="clearfix">
+					<li><img src="images/estimate_01.gif" alt=""></li>
+					<li><img src="images/estimate_02.gif" alt=""></li>
+					<li><img src="images/estimate_03.gif" alt=""></li>
+					<li><img src="images/estimate_04.gif" alt=""></li>
+
+
+							
+					
+				</ul>
+			</div>
+			<div class="img2">
+				<ul class="clearfix">
+					<li><img src="images/consult_01.gif" alt=""></li>
+					<li><img src="images/consult_02.gif" alt=""></li>
+					<li><img src="images/consult_03.gif" alt=""></li>
+					<li><img src="images/consult_04.gif" alt=""></li>
+
+					
+					
+					
+				</ul>
+			</div>
+			<div class="img2">
+				<ul class="clearfix">
+					<li><img src="images/event_01.gif" alt=""></li>
+					<li><img src="images/event_02.gif" alt=""></li>
+
+		
+				</ul>
+		
+
+			</div>
+
+			
+
+			
+		</div>
+		<!-- <div class="button">
+				<img src="images/x.jpg" alt="">
+			</div> -->
+	</div>
+
+
+</body>
+</html>
