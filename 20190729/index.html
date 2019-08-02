@@ -19,7 +19,6 @@
 		$(document).ready(function(){
 			$('.slider').bxSlider();
 			
-
 			var slide2Btn = $('.slide2').bxSlider({
 				mode:"fade",
 				pager:false,
@@ -34,14 +33,11 @@
 				slide2Btn.goToNextSlide();
 				return false; //hash tag 방지
 			});
-
 			$(".content2st").colorbox({
 			iframe:true, 
 			innerWidth:640, 
 			innerHeight:390
 			});
-
-
 			$(".toggleMenu").click(function(){
 				var myClass = $(this).attr("class");
 				console.log(myClass);
@@ -53,9 +49,7 @@
 					$("#main_menu").stop().animate({left:"-100%"},300)
 				}
 			});
-
-
-
+			
 		});
 		new WOW().init();
 		// WOW.prototype.addBox = function(element) {
@@ -69,21 +63,14 @@
 		//     }).removeClass('animated');
 		//     wow.addBox(this);
 		//   }).scrollSpy();
-
-
 			
-
 	</script>
 </head>
 <body>
 <header id="main_header">
 	<div id="header_top" class="clearfix">
 		<h1>LOGO</h1>
-		<div class="toggleMenu">
-			<div class="bar1"></div>
-			<div class="bar2"></div>
-			<div class="bar3"></div>
-		</div>
+
 		<nav id="main_menu">
 			<ul class="clearfix">
 				<li><a href="#">회사소개</a></li>
@@ -94,7 +81,11 @@
 				<li><a href="#">인재채용</a></li>
 			</ul>
 		</nav>
-		
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
 		
 	</div>
 	<div class="slider_wrap">

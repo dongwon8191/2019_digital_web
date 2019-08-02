@@ -5,51 +5,20 @@
 
 
 @media all and (max-width:630px){
-	#main_header{height: 850px;}
-	#main_header .content li{height: 250px;}
-	.slider_wrap ul li{height: 300px;}
-	.slider_wrap h3{font-size:2em;}
-	.slider_wrap p{font-size:0.7em;}
-
-	.content li.content3st .btn{position: absolute;left:180px;bottom:20px;cursor:pointer;}
-.content li.content3st .btn img{float: left;width:30px;border: 1px solid #cdcdcd;display: block;}
-.content li.content3st .btn img:first-child{border-right:1px solid #fff;}
-.content li.content3st .slide2 li .right{width: 50%; height: 295px; float: left ;position: relative;}
-.content li.content7st h3{font-size:16px;}
-.content li.content7st p{font-size:26px;}
-
-
-#footer_wrap{/*border-top: 2px solid #000; height: 200px;*/ width: 500px;}
-#footer_wrap .footer{width:100%;	 margin: 0 auto; padding-top: 10px;}
-#footer_wrap .footer>div{/*float: left;*/}
-#footer_wrap .footer>div.logo{width: 100%; font-size: 1.5em; font-weight: bold; text-align: center;}
-#footer_wrap .footer>div.copy{width: 100%;}
-#footer_wrap .footer>div.copy ul{margin-bottom: 15px;}
-#footer_wrap .footer>div.copy li{position: relative; float: left;}
-#footer_wrap .footer>div.copy li:after{content: ""; display: block; position: absolute; width: 2px; height: 15px; background: #000; top: 10px;left: 0;}
-#footer_wrap .footer>div.copy li:nth-child(1):after{content: ""; display: none;}
-#footer_wrap .footer>div.copy a{display: block; line-height: 25px; padding: 5px 20px; font-size:1em;}
-#footer_wrap .footer>div.copy address{font-style: normal; padding-left: 20px; line-height: 1.5em; color:#aaa;}
-
-
-
+  #main_header{height: 850px;}
+  .slider_wrap ul li{height: 300px;}
+  .slider_wrap h3{font-size:2em;}
+  .slider_wrap p{font-size:0.7em;}
+  #main_header .content li{height:250px;}
 }
 
 
 @media all and (max-width:520px){
-	#main_header .content li{height: 200px;}
-	#main_header{height: 750px;}
-	.content li.content3st .btn img{float: left;width:25px;border: 1px solid #cdcdcd;display: block;}
-
-	.content li.content3st .slide2 li .right{width: 50%; height: 200px; float: left ;position: relative;}
-	.content li.content3st .btn{position: absolute;left:140px;bottom:20px;cursor:pointer;}
-	.content li.content3st .slide2 .left{ padding-top:5px;font-size:0.8em;}
-
-	.content li.content3st h2{font-size:1.1em;}
-	#header_top > h1{float: left;color:black; font-size:28px;}
-
-
-
+  #main_header{height: 750px;}
+  .slider_wrap ul li{height: 300px;}
+  .slider_wrap h3{font-size:2em;}
+  .slider_wrap p{font-size:0.7em;}
+  #main_header .content li{height:200px;}
+  .content li.content3st .slide2 li .right{height:200px;}
+  .content .card p{font-size:1em;}
 }
-
-
