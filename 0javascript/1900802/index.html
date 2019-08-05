@@ -33,7 +33,7 @@
 				if(scrollY > winHeight/2){
 					$(".top").addClass("view");
 				}else{
-					$(".top").removeClass("view")
+					$(".top").removeClass("view");
 				}
 
 
@@ -55,7 +55,15 @@
 				}
 
 
-				if(scrollY > )
+				if(scrollY > 300){
+					$("body").removeClass().addClass("red");
+				}else{
+					$("body").removeClass().addClass("white");
+				}
+
+
+
+				
 
 
 
@@ -81,19 +89,28 @@
 
 
 	<style>
+		body{transition:0.8s;
+			background-attachment:fixed;
+		    background-repeat:no-repeat;
+		    background-size:cover;}
+
+		.red{background-image:url(../../images1/pc02.jpg)}
+		.white{background-image:url(../../images1/pc01.jpg)}
 		#wrapper{margin:20px; border: 1px solid #000; position: relative;}
-		.nav{width: 100%; transition:0.3s; }
+		.nav{width: 100%; transition:0.3s;  background-color:skyblue; transition:0.8s;}
 		.nav ul{}
 		.nav ul li{
 			float: left;
 			width: 20%;
-			height: 40px;
+			/*height: 40px;*/
 			text-align: center;
-			background-color:skyblue;
-			line-height:40px;}
+			transition:0.3s;
+			
+			line-height:60px;}
 
 		.nav ul li:hover{background-color:#000; color:white; cursor:pointer;}
-		.nav.fixed{position: fixed; top: 0; left: 0;}
+		.nav.fixed{position: fixed; top: 0; left: 0; background-color:blue;}
+		.nav.fixed li{color:white; line-height:40px;}
 
 
 
@@ -120,17 +137,16 @@
 		.top.view{opacity:1;}
 
 
-		#car1{position: absolute; left: 0;/* top: 1300px;*/ width: 120px; height: 70px; transition:0.8s; opacity:0;}
+		#car1{position: absolute; left: 0; top: 1300px; width: 120px; height: 70px; transition:0.8s; opacity:0;}
 		#car1.move{left: 300px; opacity:1;}
 
 		#car2{
-			position: absolute; right: 0; /*top: 1800px;*/ width: 120px; height: 70px;
+			position: absolute; right: 0; top: 1500px; width: 120px; height: 70px;
 			 transition:1s; opacity:0;}
 		#car2.move2{right: 300px; opacity:1;} 
 
 
-		body.yellow 
-
+	
 
 
 
@@ -144,7 +160,7 @@
 
 
 </head>
-<body>
+<body class="white">
 	<div class="viewBox">
 		스크롤위치 : <span class="scrollY">0</span><br>
 		메뉴위치 : <span class="menuPos">0</span><br>
