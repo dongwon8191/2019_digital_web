@@ -29,6 +29,13 @@
 			$(".bt_next").click(function(){
 				current++;
 				console.log(current);
+				$(".banner > ul").stop().animate({left:current*1000*-1},400);
+			});
+
+			$(".bt_prev").click(function(){
+				current--;
+				console.log(current);
+				$(".banner > ul").stop().animate({left:current*1000*-1},400);
 			});
 		});
 	</script>
