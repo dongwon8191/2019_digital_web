@@ -28,76 +28,63 @@
 	</style>
 	<script>
 		$(document).ready(function(){
-			var menu = $("#top_menu > ul >li"); //클릭메뉴
-			var contents = $("#contents > div"); //이미지위치
-
+			var menu = $("#top_menu > ul li"); //클릭할 메뉴
+			var contents = $("#contents > div"); // 이미지
 
 			menu.click(function(){
 				var i = $(this).index();
-				
+
 				var tt = contents.eq(i).offset().top-115;
-				console.log(tt);
+
 				$("html").stop().animate({scrollTop:tt});
 
 
-			});
+				$(window).scroll(function(){
+					var sct = $(window).scrollTop();
 
-			$(window).scroll(function(){
-				var sct = $(window).scrollTop();
-				console.log("스크롤값: " + sct);
+					// var paper = contents.eq(0).offset().top-115;
 
-				// var paper = contents.eq(0).offset().top-116;
-
-				// if(sct >= paper){
-				// 	menu.removeClass("on");
-				// 	menu.eq(0).addClass("on");
-
-				// }
-
-				// var works = contents.eq(1).offset().top-116;
-
-				// if(sct >= works){
-				// 	menu.removeClass("on");
-				// 	menu.eq(1).addClass("on");
-
-				// }
+					// if(sct >= paper){
+					// 	menu.removeClass("on");
+					// 	menu.eq(0).addClass("on");
+						
+					// }
 
 
-				// var email = contents.eq(2).offset().top-116;
 
-				// if(sct >= email){
-				// 	menu.removeClass("on");
-				// 	menu.eq(2).addClass("on");
+					// var works = contents.eq(1).offset().top-115;
 
-				// }
+					// if(sct >= works){
+					// 	menu.removeClass("on");
+					// 	menu.eq(1).addClass("on");
+						
+					// }
 
 
-				//each문을 사용할시, 대상자 eq index
+					// var email = contents.eq(2).offset().top-115;
 
-				contents.each(function(index){
-					// 아래와 같음  if(sct >= $(this).offset().top-116){
+					// if(sct >= email){
+					// 	menu.removeClass("on");
+					// 	menu.eq(2).addClass("on");
+						
+					// }
 
-					if(sct >= contents.eq(index).offset().top-116){
-					menu.removeClass("on");
-					menu.eq(index).addClass("on");
+
+					contents.each(function(index){
+
+						if(sct >= contents.eq(index).offset().top-116{
+
+							menu.removeClass("on");
+
+							menu.eq(index).addClass("on");
+
+						}
 					
-				}
+
 
 				});
 
-				//for문으로 할때
 
-
-			// 	for(var i=0; i<contents.length;i++){
-
-			// 		if(sct >= contents.eq(index).offset().top-116){
-			// 		menu.removeClass("on");
-			// 		menu.eq(index).addClass("on");
-
-			// 	}
-			// }
- 
- 
 			});
 		});
 	</script>
