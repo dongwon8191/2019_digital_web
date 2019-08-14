@@ -1,0 +1,258 @@
+!<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>slider</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery.mousewheel.min.js"></script> 
+	<style>
+		.wrap{width: 1000px;margin: 0 auto}
+		.banner{width:100%;height:400px;position: relative;overflow: hidden;}
+		.banner>ul{width:5000px;position: absolute;/*left:0px;*/} /*이미지사이즈 1000x400px*/
+		.banner>ul>li{width: 1000px;/*float: left;*/position:absolute;}
+		/*.banner>ul>li:nth-child(2){left: 1000px;}
+		.banner>ul>li:nth-child(3){left: 2000px;}
+		.banner>ul>li:nth-child(4){left: 3000px;}
+		.banner>ul>li:nth-child(5){left: 4000px;}*/
+	/*	.banner>ul>li:nth-child(2){top: 400px;}
+		.banner>ul>li:nth-child(3){top: 800px;}
+		.banner>ul>li:nth-child(4){top:1200px;}
+		.banner>ul>li:nth-child(5){top: 1600px;}*/
+
+
+		.banner>ul>li:nth-child(1){z-index:1;}
+
+
+
+		/*pager*/
+
+
+		.wrap .pager{height: 40px;}
+		.wrap .pager span{
+			width: 15px; height: 15px;
+			background-color:orange;
+			display: block; /*span태그라서*/
+			float: left;
+			border-radius:10px;
+			cursor:pointer;
+			margin:5px;
+			text-indent:-9999px;
+
+		}
+
+		.wrap .pager span.active{background-color:yellow;}
+
+
+
+
+
+
+	</style>
+	<script>
+	$(document).ready(function(){
+		var current = 0;
+		var i;
+
+		var zI = 1;
+
+		var pager = $(".wrap .pager span");
+
+
+		function slider1(){
+			i = current + 1;
+			if(i==5){
+				current=4;
+				i=0;
+			}
+
+			var currentEl = $(".banner > ul > li").eq(current);
+			var nextEl = $(".banner > ul >li").eq(i);
+
+			// currentEl.css({left:0}).stop().animate({left:-1000},1100);
+			nextEl.css({left:1000,"z-index": zI++}).stop().animate({left:0},1100);
+
+			current = i;
+		}
+
+		function slider2(){
+
+			i = current + 1;
+
+			if(i==5){
+				current=4;
+				i=0;
+			}
+
+			var currentEl = $(".banner > ul > li").eq(current);
+			var nextEl = $(".banner > ul > li").eq(i);
+
+			// currentEl.css({top:0}).stop().animate({top:-400},1100);
+			nextEl.css({top:400,"z-index": zI++}).stop().animate({top:0},1100);
+
+			current = i;
+		}
+
+		function slider3(){
+
+			i = current + 1;
+
+			if(i==5){
+				current=4;
+			
+			i=0;}
+
+			var currentEl = $(".banner > ul > li").eq(current);
+			var nextEl = $(".banner > ul > li").eq(i);
+
+			nextEl.css({opacity:0,"z-index": zI++}).stop().animate({opacity:1},1100);
+			current = i;
+		}
+
+		function slider4(){  //right
+			i = current - 1;
+			if(i==-1){
+				current=0;
+				i=4;
+			}
+
+			var currentEl = $(".banner > ul > li").eq(current);
+			var nextEl = $(".banner > ul >li").eq(i);
+
+			// currentEl.css({left:0}).stop().animate({left:1000},1100);
+			nextEl.css({left:-1000,"z-index":zI++}).stop().animate({left:0},1100);
+
+			current = i;
+		}
+
+
+
+
+
+
+
+		// setInterval(slider1,3000);
+
+
+
+		//button 생성, left,right 함수 생성 적용
+
+
+		$(".bt_next").click(function(){
+
+			i = current + 1;
+
+			if(i==5){
+				current=4;
+				i=0;
+			}
+
+			slideView("next");
+
+			// var currentEl = $(".banner > ul > li").eq(current);
+			// var nextEl = $(".banner > ul >li").eq(i);
+
+			// currentEl.css({left:0}).stop().animate({left:-1000},1100);
+			// nextEl.css({left:1000}).stop().animate({left:0},1100);
+
+			// currnet = i;
+		});
+
+
+		$(".bt_prev").click(function(){
+
+			i = current - 1;
+
+			if(i==-1){
+				current=0;
+				i=4;
+			}
+
+			slideView("prev");
+
+			// var currentEl = $(".banner > ul > li").eq(current);
+			// var nextEl = $(".banner > ul >li").eq(i);
+
+			// currentEl.css({left:0}).stop().animate({left:1000},1100);
+			// nextEl.css({left:-1000}).stop().animate({left:0},1100);
+
+			// currnet = i;
+
+
+		});
+
+		pager.click(function(){
+			i = $(this).index();
+			slideView("next");
+		});
+
+		function slideView(view){
+
+			var currentEl = $(".banner > ul >li").eq(current);
+			var nextEl = $(".banner > ul > li").eq(i);
+
+			pager.removeClass("active");
+			pager.eq(i).addClass("active");
+
+
+
+			if(view == "next"){
+
+			currentEl.css({left:0}).stop().animate({left:-1000},1100);
+			nextEl.css({left:1000,"z-index":zI++}).stop().animate({left:0},1100);
+
+			}else{
+
+			currentEl.css({left:0}).stop().animate({left:1000},1100);
+			nextEl.css({left:-1000,"z-index":zI++}).stop().animate({left:0},1100);
+
+			}
+
+
+			current = i;
+
+
+		}
+
+
+		function trigger(){
+			$(".bt_next").trigger("click");
+		}
+
+
+		setInterval(trigger,3000);
+
+		
+
+	});
+
+
+		</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="banner">  <!-- 1000px -->
+			<ul class="clearfix">  <!-- 5000px -->
+				<li><img src="../../images/images01.jpg" alt="img1"></li>
+				<li><img src="../../images/images02.jpg" alt="img2"></li>
+				<li><img src="../../images/images03.jpg" alt="img3"></li>
+				<li><img src="../../images/images04.jpg" alt="img4"></li>
+				<li><img src="../../images/images05.jpg" alt="img5"></li>
+			</ul>
+		</div>
+		<div class="pager">
+			<span class="active">1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+		</div>
+	
+		<div class="btn">
+			<span class="bt_prev">이전</span>
+			<span class="bt_next">이후</span>
+		</div>
+	</div>
+</body>
+</html>

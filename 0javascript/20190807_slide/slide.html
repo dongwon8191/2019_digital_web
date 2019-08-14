@@ -36,11 +36,18 @@
 			// 	var tt = 1000 * current * -1;
 			// 	$(".banner > ul").stop().animate({left:tt});
 			// });
+
+			//ul을 움직여서 fll 값을 이용하여 통채로 이동
+
+
 			function slider(){
 				current++;
 				if(current == 5) current=0;
 				var tt = 1000 * current * -1;
 				$(".banner > ul").stop().animate({left:tt});
+
+
+
 			}
 			function slider1(){  // left
 				//current++;
@@ -49,12 +56,15 @@
 					current=4;
 					i=0;
 				}
-				var currentEl = $(".banner > ul > li").eq(current);
-				var nextEl = $(".banner > ul > li").eq(i);
+				var currentEl = $(".banner > ul > li").eq(current); //현재위치값
+				var nextEl = $(".banner > ul > li").eq(i); //다음번 위치값
+
 				currentEl.css({left:0}).stop().animate({left:-1000},1100);
 				nextEl.css({left:1000,"z-index":zI++}).stop().animate({left:0},1100);
+
 				current = i;
 			}
+
 			function slider2(){ // top
 				//current++;
 				i = current + 1;
@@ -66,6 +76,7 @@
 				var nextEl = $(".banner > ul > li").eq(i);
 				currentEl.css({top:0}).stop().animate({top:-400},1100);
 				nextEl.css({top:400,"z-index":zI++}).stop().animate({top:0},1100);
+
 				current = i;
 			}
 
@@ -86,26 +97,26 @@
 				current = i;
 			}
 
-			function slider4(){ // fade
+			// function slider4(){ // fade
 
 
-			current = current==4?0:current+=1;
+			// current = current==4?0:current+=1;
 
-				var currentEl = $(".banner > ul > li").eq(current-1);
-				var nextEl = $(".banner > ul > li").eq(current);
+			// 	var currentEl = $(".banner > ul > li").eq(current-1);
+			// 	var nextEl = $(".banner > ul > li").eq(current);
 				
-				nextEl.css({opacity:0,"z-index":zI++}).stop().animate({opacity:1},1100);
-				current = i;
-			}
+			// 	nextEl.css({opacity:0,"z-index":zI++}).stop().animate({opacity:1},1100);
+			// 	current = i;
+			// }
 
-			setInterval(slider3,3000);
+			setInterval(slider1,3000);
 		});
 	</script>
 </head>
 <body>
 	<div class="wrap">
-		<div class="banner">
-			<ul class="clearfix">
+		<div class="banner">  <!-- 1000px -->
+			<ul class="clearfix">  <!-- 5000px -->
 				<li><img src="../../images/images01.jpg" alt="img1"></li>
 				<li><img src="../../images/images02.jpg" alt="img2"></li>
 				<li><img src="../../images/images03.jpg" alt="img3"></li>
