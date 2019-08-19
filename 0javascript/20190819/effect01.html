@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>effect01</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+
+
+</head>
+
+<style>
+	
+	.content{width: 400px; background-color:#eee;}
+</style>
+<script>
+	$(document).ready(function(){
+		$(".btn2").hide();
+		$(".btn1").click(function(){
+
+			$(".box").slideUp(1000,"linear",//linear 일정한 시간으로 움직임
+
+				//콜백함수 
+			function(){
+
+				$(".btn1").hide();
+				$(".btn2").show();
+				//alert("슬라이드업되었습니다!!");
+
+			}); 
+
+
+		});
+
+		$(".btn3").click(function(){
+
+			$(".box").slideDown(1000,"swing",function
+				(){
+
+					$(".btn1").show();
+					$(".btn2").hide();
+					//alert("슬라이드다운되었습니다!!");
+				});
+
+
+
+
+		});
+
+
+		$(".btn2").click(function(){
+			$(".box").fadeIn(1000,"swing",function(){
+				$(".btn2").hide();
+				$(".btn1").show();
+			});
+		});
+
+
+		$(".btn4").click(function(){
+
+			$(".box").slideToggle(1000,"swing");
+			//$(".box").toggle();
+
+		});
+
+		$(".btn5").click(function(){
+
+			$(".box").fadeTo(1000,0.3);
+		});
+		$(".btn6").click(function(){
+			$(".box").fadeTo(1000,1);
+		});
+
+	});
+</script>
+<body>
+	<div>
+		<button class="btn1">slideUp</button>
+		<button class="btn2">fadeIn</button>
+		<!-- <button class="btn3">slideDown</button> -->
+	</div>
+
+	<div>
+		<button class="btn4">slideToggle</button>
+	</div>
+	<div>
+		<button class="btn5">fadeTo 0.3</button>
+		<button class="btn6">fadeTo 1</button>
+	</div>
+
+	<div class="box">
+		<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni id quia ex repellat facilis, iste sint, asperiores porro, velit deserunt libero. Vitae id perspiciatis, aperiam minus velit, assumenda facere error laudantium mollitia sequi ullam quos vel voluptatibus tempora ipsum. Deserunt laboriosam excepturi voluptate ex rerum nemo fugit assumenda, placeat quis hic consequuntur eius cumque eum facere incidunt aut voluptatibus quo. Voluptates a libero dolorem quidem! Similique ullam praesentium deserunt iure quos, molestiae nam harum natus iusto debitis adipisci ipsam, quis minima labore deleniti quibusdam maiores error sed officiis blanditiis laborum atque? Quidem natus neque dicta laborum aliquid iusto, saepe possimus.</div>
+	</div>
+
+	<div style="height: 400px; background-color:red;"></div>
+	
+</body>
+</html>

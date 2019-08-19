@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+
+	<style>
+		#menu{width: 1000px; margin:0 auto;}
+		#menu>ul{width: 100%;}
+		#menu>ul>li{float: left; width: 20%; line-height: 40px; border-right: 2px solid #dbdbdb; position: relative;}
+		#menu>ul>li:first-child{border-left: 2px solid #dbdbdb;}
+		#menu>ul>li:hover{background-color:#dddd;}
+		#menu>ul>li>a{display: block; text-align: center; font-weight: bold;}
+
+		#menu ul.sub{display: none; position: absolute; width: 100%; background-color:yellow;}
+		#menu ul.sub>li{width: 100%; border-right: 2px solid #dbdbdb;}
+		#menu ul.sub>li>a{display: block; text-align: center; color:#ffff;}
+		#menu ul.sub>li:hover{background-color:#000;}
+
+		/*css 이용해서 menu 만들기*/
+
+
+		/*#menu>ul>li:hover ul.sub{display: block;}*/
+
+		/*#menu>ul:hover ul.sub{display: block;}*/
+        
+        
+
+
+	</style>
+
+
+	<script>
+		
+		$(document).ready(function(){
+
+			// 1.css() 활용
+
+
+			$("ul.sub").css("display","none");
+			$("#menu>ul>li").mouseover(function(){
+
+				var index = $(this).index();
+
+				$("#menu>ul>li").eq(index).find("ul.sub").css("display","block");
+			});
+
+
+			$("#menu>ul>li").mouseout(function(){
+
+				$("ul.sub").css("display","none")
+			});
+
+
+			// show/hide 활용
+
+			$("ul.sub").hide();
+
+			$(#menu>ul>li).mouseover(function(){
+
+				var index = $(this)
+			});
+
+
+
+		});
+	</script>
+</head>
+
+<body>
+<nav id="menu">
+	<ul class="clearfix">
+		<li>
+			<a href="#">menu1</a>
+			<ul class="sub">
+				<li><a href="#">smenu1</a></li>
+				<li><a href="#">smenu2</a></li>
+				<li><a href="#">smenu3</a></li>
+				<li><a href="#">smenu4</a></li>
+				<li><a href="#">smenu5</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">menu2</a>
+			<ul class="sub">
+				<li><a href="#">smenu1</a></li>
+				<li><a href="#">smenu2</a></li>
+				<li><a href="#">smenu3</a></li>
+				<li><a href="#">smenu4</a></li>
+				<li><a href="#">smenu5</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">menu3</a>
+			<ul class="sub">
+				<li><a href="#">smenu1</a></li>
+				<li><a href="#">smenu2</a></li>
+				<li><a href="#">smenu3</a></li>
+				<li><a href="#">smenu4</a></li>
+				<li><a href="#">smenu5</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">menu4</a>
+			<ul class="sub">
+				<li><a href="#">smenu1</a></li>
+				<li><a href="#">smenu2</a></li>
+				<li><a href="#">smenu3</a></li>
+				<li><a href="#">smenu4</a></li>
+				<li><a href="#">smenu5</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">menu5</a>
+			<ul class="sub">
+				<li><a href="#">smenu1</a></li>
+				<li><a href="#">smenu2</a></li>
+				<li><a href="#">smenu3</a></li>
+				<li><a href="#">smenu4</a></li>
+				<li><a href="#">smenu5</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+<div style="height: 400px; background-color:blue"></div>
+
+</body>	
