@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	
+	<script>
+        $(document).ready(function(){
+//            $(".btn1").on("이벤트명",function(){});
+//            $(".btn1").이벤트명(function(){});
+            $(".btn1").on("click",function(){
+                $(".txt1").animate({marginLeft:500,
+                    fontSize:"30px"},  //제이쿼리에서 숫자에는 px를 안적어도된다 px이나 %를 적을시 ""
+                    2000,"linear",function(){
+                    alert("이동완료");
+                    
+                    
+                }); 
+                
+            });
+            
+            $(".btn2").click(function(){
+                
+                $(".txt2").stop().delay(1000).animate({marginLeft:"+=50px"}, //delay는 항상 animate에 적용된다
+                 function(){
+                    $(".txt2").addClass("red");
+                });
+            });
+            
+            $(".btn3").click(moveEl);
+            function moveEl(){
+            
+               $(".txt3").stop().animate({marginLeft:"+=50px"});
+               $(".txt4").animate({marginLeft:"+=50px"}).stop();
+               $(".txt5").animate({marginLeft:"+=50px"}).stop(true,false);
+                //stop(true,fales)전체적으로 멈춤,끝점으로 이동
+                
+                };
+        });
+    </script>
+    
+    <style>
+        
+         .txt2{background-color:pink;}
+         .txt3{background-color:orange;}
+         .txt4{background-color:green;}
+         .txt5{background-color:gold;}
+        
+        .txt2.red{color:red;}
+        
+        p{width: 100px; text-align: center;}
+        
+        
+    </style>
+</head>
+<body>
+   <div><button class="btn1">버튼1</button></div>
+   <span class="txt1">이동</span>
+   
+   <div><button class="btn2">버튼2</button></div>
+   <span class="txt2">50px 이동</span>
+   
+   <div><button class="btn3">버튼3</button></div>
+   <p class="txt3">효과1</p>
+   <p class="txt4">효과2</p>
+   <p class="txt5">효과2</p>
+   
+   
+    
+</body>
+</html>

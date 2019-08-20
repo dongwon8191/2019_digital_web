@@ -1,115 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=`">
 	<meta charset="UTF-8">
-	<title>세로메뉴</title>
+	<title>문서 제목</title>
 	<link rel="stylesheet" href="../../css/reset.css">
 	<script src="../js/jquery-3.3.1.min.js"></script>
-
 	<style>
-		#menu{width: 1000px; margin:0 auto;}
+		#menu{width: 1000px;margin:0 auto}
 		#menu>ul{width: 100%;}
 		#menu>ul>li{
-			float: left; width: 20%; line-height: 40px; border-right:1px solid #cdcdcd; position: relative;}
-
-		#menu>ul>li:first-child{border-left: 1px solid #cdcdcd;}	
-		#menu>ul>li:hover{background-color:#eee;}
-		#menu>ul>li>a{display: block; text-align: center; font-weight: bold;}
-
-
+			float: left;width: 20%;line-height:40px;
+			border-right: 1px solid #000;position: relative;
+		}
+		#menu>ul>li:first-child{border-left: 1px solid #000;}
+		#menu>ul>li:hover{background-color: #eee;}
+		#menu>ul>li>a{display: block;text-align: center;font-weight:bold}
 		/*#menu>ul>li:hover ul.sub{display: block;}*/
-		/*#menu>ul:hover ul.sub{display: block;} 
-*/
-
-		#menu ul.sub{display: none; position: absolute; width: 100%; background-color:#eee;}
-		#menu ul.sub>li{width: 100%;}
-		#menu ul.sub>li:hover{background-color:#aaa;}
-		#menu ul.sub>li>a{display: block; text-align: center;}
-
-
+		#menu ul.sub{
+			_display: none;position: absolute;width:100%;
+			background-color: #eee;
+		}
+		#menu ul.sub>li{width:100%;}
+		#menu ul.sub>li:hover{background-color: #aaa;}
+		#menu ul.sub>li>a{display: block;text-align: center;}
 	</style>
-
 	<script>
 		$(document).ready(function(){
 			// css()활용
-
 			// $("ul.sub").css("display","none");
 			// $("#menu>ul>li").mouseover(function(){
-
 			// 	var index = $(this).index();
-			// 	// $("#menu>ul>li:eq("+ index +") ul.sub").css("display","block");
-
-
+			// 	//$("#menu>ul>li:eq("+ index +") ul.sub").css("display","block");
 			// 	// $("#menu>ul>li").eq(index).find("ul.sub").css("display","block");
-
-			// 	$("#menu>ul>li:eq(" + index +")").find("ul.sub").css("display","block");
-
-
+			// 	$("#menu>ul>li:eq("+index+")").find("ul.sub").css("display","block");
+			// 	//$("ul.sub").css("display","block");
+			// }).mouseout(function(){
+			// 	$("ul.sub").css("display","none");
 			// });
-
-			// $("#menu>ul>li").mouseout(function(){
-
-			// 	$("ul.sub").css("display","none")
+            
+            
+			// show()/hide()활용
+			// $("ul.sub").hide();
+			// $("#menu>ul>li").mouseover(function(){
+			// 	var index = $(this).index();
+			// 	$("#menu>ul>li").find("ul.sub").eq(index).show();
+			// }).mouseout(function(){
+			// 	$("ul.sub").hide();
 			// });
-
-
-
-			// show/hide 활용
-			
-
-
-
-
-
-
-
-
-			// slideDown() slideup() 활용
-
-
+            
+            
+			//slideDown()/slideUp() 활용
 			 $("ul.sub").hide();
-			 $("#menu>ul>li").mouseover(function(){
-
+			 $("#menu>ul>li").mouseenter(function(){
 			 	var index = $(this).index();
-
 			 	$("ul.sub").eq(index).stop().slideDown();
-
-
-
-			 }).mouseout(function(){
-
-			
-
-			 	$("ul.sub").stop().hide();
+			 }).mouseleave(function(){
+			 	$("ul.sub").hide();
 			 });
-
-
-
+            
+            
+            
 			// hover()활용
-
 //			$("ul.sub").hide();
-//			// $("#menu>ul>li").hover(function(){},function(){}
+//			// $("#menu>ul>li").hover(function(){},function(){});
 //			$("#menu>ul>li").hover(function(){
 //				var index = $(this).index();
-//				// $("ul.sub").eq(index).stop().slideDown(100,"linear");
-//				$("ul.sub").stop().slideDown(100,"linear");
-//
+//				$("ul.sub").eq(index).stop().slideDown(100,"linear");
+//				// $("ul.sub").stop().slideDown(100,"linear");
 //			},function(){
-//
 //				$("ul.sub").hide();
-//
 //			});
-
-
-
-
 		});
 	</script>
 </head>
 <body>
-
-	<!-- nav#menu>ul>li*5>a[#]>{menu$}^ul.sub>li*5>a[#]>{smenu$} --> 
+	<!-- nav#menu>ul>li*5>a[#]>{menu$}^ul.sub>li*5>a[#]>{smenu$} -->
 	<nav id="menu">
 		<ul class="clearfix">
 			<li>
@@ -164,8 +130,6 @@
 			</li>
 		</ul>
 	</nav>
-
-	<div style="height: 400px;background-color:red;"></div>
-	
+	<div style="height: 400px;background: #f00;"></div>
 </body>
 </html>
