@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	
+	<script>
+        $(document).ready(function(){
+            
+//            $(".box")
+//                .animate({marginLeft:200},1000)
+//                .animate({marginTop:200},1000)
+//                .queue(function(){
+//                
+//                $(".box").css({backgroundColor:"pink"});
+//                $(".box").dequeue();
+//            })
+//                .animate({marginLeft:0},1000)
+//                .animate({marginTop:0},1000)
+//              
+//                .queue(function(){
+//                $(".box").css({backgroundColor:"aquamarine"});
+//                $(".box").dequeue();
+//            });
+            
+            function move01(){
+                
+                if(!$(".ball01").is(":animated")){
+                    
+               
+            
+            
+            $(".ball01")
+                .animate({left:470},1000)
+                .animate({top:470},1000)
+                .queue(function(){
+                
+                $(".ball01").css({backgroundColor:"darkgreen"})
+                $(".ball01").dequeue();
+            })
+            .animate({left:0},1000)
+            .animate({top:0},1000)
+            
+             .queue(function(){
+                $(".ball01").css({backgroundColor:"greenyellow"})
+                $(".ball01").dequeue();
+            })
+                
+                }
+                
+                 }
+            
+            $(".btn").click(function(){
+                
+                move01();
+            });
+            
+        });
+    </script>
+	
+	<style>
+        .box{width: 50px; text-align: center; background-color:aquamarine;}
+        .boxWrap{width: 500px; height: 500px; margin:0 auto; background-color:darkviolet; position: relative;}
+        
+        .ball01{ 
+            width: 30px; height: 30px; border-radius:15px; background-color:greenyellow; position: absolute;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+   <div class="box">내용</div>
+   
+   <button class="btn">움직여</button>
+   
+   <div class="boxWrap">
+       <div class="ball01"></div>
+   </div>
+    
+</body>
+</html>
