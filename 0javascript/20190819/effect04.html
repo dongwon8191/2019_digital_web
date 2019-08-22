@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	
+	<script>
+        
+        $(document).ready(function(){  //콜백함수와 재기함수
+//            function carMove(){ //car move start
+//            
+//            $(".carWrap img:eq(0)")
+//                .animate({left:"-=100"},1000,function(){
+//                   $(".carWrap img:eq(0)").animate({left:"+=100"},1000,carMove)//자기자신의 함수를 계속 호출 반복
+//                
+//            })
+//                }//car move end
+//            
+//            carMove();
+//            
+//         
+            function carMove(){
+                
+                console.log($(".carWrap img").length);
+                if($(".carWrap img").length == 0){
+                    $(".carWrap").html("이제 차 없다<br> <img src='../../images/car.png'>");
+                    return;
+                }
+//            
+            $(".carWrap img:eq(0)").animate({left:"-=100"},1000,function(){
+                $(".carWrap img:eq(0)").animate({left:"+=100"},500,carMove)
+            })
+                
+                }
+            
+            carMove();
+            
+            $(".btn").click(function(){
+                
+                $(".carWrap img:animated").animate({left:"-=400"},function(){
+                    
+                    $(this).remove();
+                    carMove();
+                })
+            });
+                         
+            
+        });
+        
+//        var num = 10;
+//        num += 100; num = 10 + 100
+    </script>
+    
+    <style>
+        .carWrap{
+            height: 220px; text-align: center;
+            margin-top:50px;}
+        
+        .carWrap img{
+            position: relative;}
+    </style>
+	
+	
+	
+    
+</head>
+<body>
+  <div class="carWrap">
+      <img src="../../images/car.png" alt="">
+      <img src="../../images/car.png" alt="">
+      <img src="../../images/car.png" alt="">
+      <img src="../../images/car.png" alt="">
+  </div>
+  
+  <button class="btn">다음차</button>
+</body>
+</html>
