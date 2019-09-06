@@ -300,7 +300,7 @@ ul.content01 li .overlay img.title{
 .content02{    padding-top: 150px;
     width: 1900px !important;
     right: 250px;
-    height: 1500px;
+    
     position: relative;
 }
     
@@ -318,6 +318,19 @@ section.scene{
 	 section.scene.three{background-color:white; height:895px !important;}
 	 section.scene.one{background-image:url(../img/section04_img.jpg); height: 350px !important; }
 
+
+/*content03*/
+
+
+.content03{height: 900px; margin-left: 70px; margin-top: 150px;}
+.content03>ul{width: 1280px;}
+.content03>ul>li{float: left;
+    border: 1px solid #000;
+    width: 620px;
+    height: 360px;
+    margin: 10px;}
+
+.content03>ul>li:nth-child(1){background-image:url(https://www.youtube.com/embed/xi9AAInmnnM);}    
 
 
 /* 하단 레이아웃 */

@@ -183,7 +183,16 @@ include_once(G5_THEME_PATH.'/head.php');
     <section class="scene four"></section>
 </div>
 
-<div style="width: 100%; height: 1000px; background-color:yellow"></div>
+<div class="content03">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+    
+
     
 
 

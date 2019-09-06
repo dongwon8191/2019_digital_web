@@ -28,17 +28,12 @@ if (G5_IS_MOBILE) {
 <hr>
 
 <!-- 하단 시작 { -->
-<div id="ft">
+<div id="ft" style="height:120px !important">
 
     <div id="ft_wr">
-        <div id="ft_link">
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">회사소개</a>
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=privacy">개인정보처리방침</a>
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=provision">서비스이용약관</a>
-            <a href="<?php echo get_device_change_url(); ?>">모바일버전</a>
-        </div>
-        <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft_logo.png" alt="<?php echo G5_VERSION ?>"></div>
-        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
+     
+        <div id="ft_catch"> <img src="<?echo G5_THEME_IMG_URL?>/footer_logo.png" alt=""></div>
+        <div id="ft_copy">Copyright &copy; <b>NOT JUST A LABLE.</b> All rights reserved.</div>
     </div>
     
     <button type="button" id="top_btn"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span></button>
