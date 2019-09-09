@@ -256,7 +256,7 @@ box-shadow: 0 2px 5px rgba(0,0,0,0.2);}
 	font-size:1em;width:100%;zoom:1}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {font-size:1.333em;margin:0 auto;font-weight:bold;}
-#container_title span{margin:0 auto 10px;display:block;line-height:30px;}
+#container_title span{display: none;}
 /*.latest_wr:after {display:block;visibility:hidden;clear:both;content:""}*/
 .bx-viewport{width: 1500px !important; height: 591px !important;}
 
@@ -291,10 +291,7 @@ ul.content01 li .overlay img.title{
         left: 20px;
         font-size: 13px;
         font-weight: bold;}
-  ul.content01 .text01 h3:after{
-  	width: 200px; height: 1px; background-color:#cdcdcd; content:""; display: block;
-
-  }   
+  
    
 
 .content02{    padding-top: 150px;
@@ -322,13 +319,22 @@ section.scene{
 /*content03*/
 
 
-.content03{height: 900px; margin-left: 70px; margin-top: 150px;}
-.content03>ul{width: 1280px;}
-.content03>ul>li{float: left;
-    border: 1px solid #000;
-    width: 620px;
-    height: 360px;
-    margin: 10px;}
+.content03{margin:100px auto; position: relative;}
+.content03>ul{}
+.content03>ul>li{float: left; margin-left: 50px;margin-top: 50px;}
+.content03>ul>li:hover{ opacity:0.8; cursor:pointer;}
+
+
+    
+.content03>ul>li>img{height: 230px;width:410px; }
+.content03>ul>li>p{text-align: center; padding-top: 10px;font-weight: bold;}
+  
+
+   
+
+   
+    
+   
 
 .content03>ul>li:nth-child(1){background-image:url(https://www.youtube.com/embed/xi9AAInmnnM);}    
 

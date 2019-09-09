@@ -85,7 +85,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <img src="<?echo G5_THEME_IMG_URL?>/content_img02.jpg" alt="">
          <div class="overlay">
             <!-- <h3>MOON CHANG</h3> -->
-            <img src="<?echo G5_THEME_IMG_URL?>/title.png" alt="" class="title">
+            <img src="<?echo G5_THEME_IMG_URL?>/title01.png" alt="" class="title">
             <p>BLACK SHEEP <br> NJAL+</p>
 
         </div>
@@ -94,7 +94,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <img src="<?echo G5_THEME_IMG_URL?>/content_img03.jpg" alt="">
          <div class="overlay">
             <!-- <h3>MOON CHANG</h3> -->
-            <img src="<?echo G5_THEME_IMG_URL?>/title.png" alt="" class="title">
+            <img src="<?echo G5_THEME_IMG_URL?>/title02.png" alt="" class="title">
             <p>BLACK SHEEP <br> NJAL+</p>
 
         </div>
@@ -103,7 +103,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <img src="<?echo G5_THEME_IMG_URL?>/content_img04.jpg" alt="">
          <div class="overlay">
             <!-- <h3>MOON CHANG</h3> -->
-            <img src="<?echo G5_THEME_IMG_URL?>/title.png" alt="" class="title">
+            <img src="<?echo G5_THEME_IMG_URL?>/title03.png" alt="" class="title">
             <p>BLACK SHEEP <br> NJAL+</p>
 
         </div>
@@ -112,7 +112,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <img src="<?echo G5_THEME_IMG_URL?>/content_img05.jpg" alt="">
          <div class="overlay">
             <!-- <h3>MOON CHANG</h3> -->
-            <img src="<?echo G5_THEME_IMG_URL?>/title.png" alt="" class="title">
+            <img src="<?echo G5_THEME_IMG_URL?>/title04.png" alt="" class="title">
             <p>BLACK SHEEP <br> NJAL+</p>
 
         </div>
@@ -121,7 +121,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <img src="<?echo G5_THEME_IMG_URL?>/content_img06.jpg" alt="">
          <div class="overlay">
             <!-- <h3>MOON CHANG</h3> -->
-            <img src="<?echo G5_THEME_IMG_URL?>/title.png" alt="" class="title">
+            <img src="<?echo G5_THEME_IMG_URL?>/title05.png" alt="" class="title">
             <p>BLACK SHEEP <br> NJAL+</p>
 
         </div>
@@ -130,7 +130,7 @@ include_once(G5_THEME_PATH.'/head.php');
     <div class="text01" style="width: 1400px; height: 50px;text-align: center;">
     
    
-        <h3 style="width: 100%;font-size: 14px;">SEARCH FOR MORE SHOP</h3>
+        <h3 style="width: 100%;font-size: 14px; ">SEARCH FOR MORE SHOP</h3>
     
     </div>
 </ul>
@@ -184,11 +184,40 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <div class="content03">
+    <img src="<?echo G5_THEME_IMG_URL?>/menu_title01.png" style="position: absolute;z-index: 9;right: 30px;
+    top: 120px;"> 
+
+    
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+       <img src="<?echo G5_THEME_IMG_URL?>/fe01.jpg" alt="">
+       <p>DESIGNER FOCUS: DE MIL</p>
+        </li>
+
+        <li>
+            <img src="<?echo G5_THEME_IMG_URL?>/fe02.jpg" alt="">
+        <p>FASHION’S IMPULSE TO FAVOR CREATIVITY OVER GENDER EQUALITY</p>
+        </li>
+
+        <li>
+            <img src="<?echo G5_THEME_IMG_URL?>/fe03.jpg" alt="">
+            <p>HOW DID THE 1980S AIDS CRISIS AFFECT FASHION?</p>
+        </li>
+
+        <li>
+            <img src="<?echo G5_THEME_IMG_URL?>/fe04.jpg" alt="">
+            <p>FASHION & FANTASY | PART 28</p>
+        </li>
+
+        <li>
+            <img src="<?echo G5_THEME_IMG_URL?>/fe05.jpg" alt="">
+            <p>THE CLASS OF 2019 STANDOUTS</p>
+        </li>
+
+        <li>
+            <img src="<?echo G5_THEME_IMG_URL?>/fe06.jpg" alt="">
+            <p>MY FAVOURITE PIECE: MYRIAMSOS FINE JEWELLERY</p>
+        </li>
     </ul>
 </div>
     
