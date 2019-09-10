@@ -90,10 +90,20 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/wzappend.css">'
                     ?>
 
                     <figcaption>
-                        <span class="post-head"><?php echo cut_str($list[$i]['wr_subject'], 20) ?></span>
-                        
-                        <a href="<?php echo $list[$i]['href'] ?>">View more</a>
-                    </figcaption>			
+                        <span class="post-head" style="text-align: left"><?php echo cut_str($list[$i]['wr_subject'], 20) ?>
+                            <br><p style="
+                            font-size:12px !important; 
+                            font-size: 12px !important;
+                            text-align: left;
+                            padding-left: 10px; 
+                            padding-top: 10px;">
+                            BLACK<br>SHEEPNJAL+</p>
+    
+                        </span>
+                        <a href="<?php echo $list[$i]['href'] ?>">View mores</a>
+                    </figcaption>
+
+
                 </figure>
                
             </div>
