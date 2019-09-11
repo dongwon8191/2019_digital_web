@@ -3,7 +3,7 @@
 
 /* 초기화 */
 html {overflow-y:scroll}
-body {margin:0;padding:0;font-size:0.75em;font-family:'Malgun Gothic', dotum, sans-serif;background:#e7e7e7}
+body {margin:0;padding:0;font-size:0.75em;font-family:'Malgun Gothic', dotum, sans-serif;background:#fff}
 html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
 h1, h2, h3, h4, h5, h6 {font-size:1em;font-family:'Malgun Gothic', dotum, sans-serif}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
@@ -52,8 +52,10 @@ border: 1px solid #558ab7 !important;
 #hd_wrapper,
 #tnb ul,
 #gnb .gnb_wrap,
-#container_wr,
-#ft_wr{width:1500px}
+
+#ft_wr{width:1200px;}
+
+#container_wr{width: 100%;}
 
 /* 팝업레이어 */
 #hd_pop {z-index:1000;position:relative;margin:0 auto;height:0}
@@ -125,7 +127,7 @@ border: 1px solid #558ab7 !important;
     z-index: 99
 }
 
-.bx-wrapper{position: relative;}
+.bx-wrapper{position: relative; width:1400px !important; margin:0 auto; }
 .bx-pager{display: none;}
 
 .slider .text p:after{
@@ -181,10 +183,13 @@ border: 1px solid #558ab7 !important;
 #gnb{
 	position:relative;
     left: 250px;
-    top: 30px;}
+    top: 30px;
+    width: 100% !important;}
 #gnb h2{position:absolute;font-size:0;line-height:0;overflow:hidden}
 #gnb .gnb_wrap{margin:0 auto;position:relative}
 #gnb #gnb_1dul {font-size:1.083em;padding: 0;zoom:1;
+    width: 1400px;
+    
 
 }
 #gnb ul:after {display:block;visibility:hidden;clear:both;content:""}
@@ -249,7 +254,8 @@ box-shadow: 0 2px 5px rgba(0,0,0,0.2);}
 /* 중간 레이아웃 */
 #wrapper{background-color:#fff;}
 #container_wr:after {display:block;visibility:hidden;clear:both;content:""}
-#container_wr {z-index:5;margin-left:250px; ;height:100%;zoom:1}
+#container_wr {z-index:5;margin: 0 auto;
+    min-width: 1400px; ;height:100%;zoom:1}
 #aside {display: none;}
 
 #container {z-index:4;position:relative;float:left;min-height:500px;height:auto !important;margin: 80px auto;
@@ -258,18 +264,19 @@ box-shadow: 0 2px 5px rgba(0,0,0,0.2);}
 #container_title {font-size:1.333em;margin:0 auto;font-weight:bold;}
 #container_title span{display: none;}
 /*.latest_wr:after {display:block;visibility:hidden;clear:both;content:""}*/
-.bx-viewport{width: 1500px !important; height: 591px !important;}
+.bx-viewport{width: 100% !important; height: 591px !important;}
 
 
 /*content*/
 
-ul.content01{width: 100%; height: 1010px; margin: 80px auto; position: relative;}
+ul.content01{ width: 1400px; height: 1010px; margin: 80px auto; position: relative;}
 ul.content01:after{clear:both; content:""; display: block;}
-ul.content01 li{height: 530px; float: left; width: 480px; margin-bottom: 40px; overflow:hidden; position: relative;cursor:pointer}
-ul.content01 li img{display: block; width: 460px; height: 600px;}
+ul.content01 li{height: 530px; float: left; width: 450px;  overflow:hidden; position: relative;cursor:pointer}
+ul.content01 li img{display: block; width: 420px;
+    height: 500px;}
 
 ul.content01 .overlay{
-	width: 460px;
+	width: 420px;
     height: 120px;
     background-color: white;
     position: absolute;
@@ -278,7 +285,7 @@ ul.content01 .overlay{
     position: relative;
 }
 
-ul.content01 li:hover .overlay{bottom: 180px;}
+ul.content01 li:hover .overlay{bottom:100px;}
 ul.content01 li .overlay img.title{
 	width: 100% !important; height: 100px !important;
 
@@ -295,10 +302,8 @@ ul.content01 li .overlay img.title{
    
 
 .content02{    padding-top: 150px;
-    width: 1900px !important;
-    right: 250px;
+    width: 100% !important;
     
-    position: relative;
 }
     
    
@@ -320,7 +325,9 @@ section.scene{
 
 
 .content03{margin:100px auto; position: relative;}
-.content03>ul{}
+.content03>ul{width: 1400px;
+    margin: 0 auto;
+}
 .content03>ul>li{float: left; margin-left: 50px;margin-top: 50px;}
 .content03>ul>li:hover{ opacity:0.8; cursor:pointer;}
 

@@ -34,7 +34,7 @@ include_once(G5_THEME_PATH.'/head.php');
     <li style="height: 591px !important;">
       
 
-<img src="<?echo G5_THEME_IMG_URL?>/slide01.jpg" alt="" style="width:100%" >
+<img src="<?echo G5_THEME_IMG_URL?>/slide01.jpg" alt="" style="width:1400px" >
 
   <div class="text">
       <p style="text-align: center;padding-top: 10px;font-weight: bold; font-size: 14px; color: #565555;"
@@ -45,7 +45,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
    
     <li>
-        <img src="<?echo G5_THEME_IMG_URL?>/slide02.jpg" alt="" style="width:100%">
+        <img src="<?echo G5_THEME_IMG_URL?>/slide02.jpg" alt="" style="width:1400px">
         <div class="text">
       <p style="text-align: center;padding-top: 10px;font-weight: bold; font-size: 14px; color: #565555;"
  
@@ -54,7 +54,7 @@ include_once(G5_THEME_PATH.'/head.php');
     </li>
 
         <li>
-        <img src="<?echo G5_THEME_IMG_URL?>/slide03.jpg" alt="" style="width:100%">
+        <img src="<?echo G5_THEME_IMG_URL?>/slide03.jpg" alt="" style="width:1400px">
         <div class="text">
       <p style="text-align: center;padding-top: 10px;font-weight: bold; font-size: 14px; color: #565555;"
  
@@ -127,7 +127,7 @@ include_once(G5_THEME_PATH.'/head.php');
         </div>
     </li>
 
-    <div class="text01" style="width: 1400px; height: 50px;text-align: center;">
+    <div class="text01" style="width: 1400px; margin:0 auto; height: 50px;text-align: center;">
     
    
         <h3 style="width: 100%;font-size: 14px; ">SEARCH FOR MORE SHOP</h3>
@@ -184,7 +184,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <div class="content03">
-    <img src="<?echo G5_THEME_IMG_URL?>/menu_title01.png" style="position: absolute;z-index: 9;right: 30px;
+    <img src="<?echo G5_THEME_IMG_URL?>/menu_title01.png" style="position: absolute;z-index: 9;right: 185px;
     top: 120px;"> 
 
     
