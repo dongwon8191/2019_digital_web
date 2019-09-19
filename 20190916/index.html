@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="../js/jquery-3.3.1.min"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+
+<style>
+	/*.row > div {height: 100px;}*/
+	.bg-sky{background-color:skyblue;}
+	.bg-pink{background-color:pink;}
+	.h100{height: 100px;}
+	.h200{height: 200px;}
+	
+
+	
+</style>
+
+</head>
+<body>
+
+<div class="wrap bg-sky">
+	<div class="container">
+		<div class="row text-white font-weight-bold text-center">
+			<div class="col-12 col-sm-4 col-lg-3 col-xl-6 bg-primary">1</div>
+			<div class="col-12 col-sm-4 col-lg-3 d-xl-none bg-success">2</div>
+			<div class="col-12 col-sm-4 col-lg-3 col-xl-6 bg-info">3</div>
+			<div class="col-12 d-sm-none d-lg-block col-lg-3 d-xl-none bg-danger">4</div>
+			
+		</div>
+    </div>
+</div>
+
+
+		<div class="container mt-3"> <!-- margin -->
+			<div class="row  bg-pink p-2"> <!-- padding -->
+
+
+				<!-- 
+					0-0
+			
+					1-0.25rem 4px 16px을 기준으로 
+					2-0.5rem  8px {16px 기준}
+					3-1rem   16px {16px 기준}
+					4-1.5rem 24px {16px 기준}
+					5-3rem 48px {16px 기준}
+
+
+
+				--> 
+				<button type="button" class="btn btn-primary">basic</button>
+				<button type="button" class="btn btn-secondary ml-2">secondary</button>
+				<button type="button" class="btn btn-success ml-2">success</button>
+				<button type="button" class="btn btn-info ml-2">info</button>
+				<button type="button" class="btn btn-warning ml-2">warning</button>
+				<button type="button" class="btn btn-danger ml-2">danger</button>
+				<button type="button" class="btn btn-dark ml-2">dark</button>
+				<button type="button" class="btn btn-light ml-2">light</button>
+				<button type="button" class="btn btn-link ml-2">link</button>
+
+				
+			</div>
+	    </div>
+
+			<div class="container mt-3">
+				<div class="row bg-secondary p-2 align-items-center justify-content-center h100">
+					<!--
+					**align**
+
+					    align-item-start 
+					    align-item-end 
+						align-item-center
+						align-item-stretch
+						align-item-baseline
+
+						**justify**
+
+						justify-content-start / justify-content-end / justify-content-center
+						justify-content-between  / justify-content-around 
+						 -->
+					<a href="#" class="btn btn-primary active btn-lg ">basic</a>
+					<a href="#" class="btn btn-success ml-2 active btn-sm btn-block ">success</a>
+				</div>
+			</div>
+
+			<!-- margin:0 auto
+			ml-auto
+			mr-auto -->
+
+			<div class="container mt-3"> <!-- margin -->
+			<div class="row p-2"> <!-- padding -->
+
+				<button type="button" class="btn btn-outline-primary">basic</button>
+				<button type="button" class="btn btn-outline-secondary ml-2">secondary</button>
+				<button type="button" class="btn btn-outline-success ml-2">success</button>
+				<button type="button" class="btn btn-outline-info ml-2">info</button>
+				<button type="button" class="btn btn-outline-warning ml-2">warning</button>
+				<button type="button" class="btn btn-outline-danger ml-2">danger</button>
+				<button type="button" class="btn btn-outline-dark ml-2">dark</button>
+				<button type="button" class="btn btn-outline-light ml-2">light</button>
+				<button type="button" class="btn btn-outline-link ml-2">link</button>
+
+				
+			</div>
+	    </div>
+
+	    <!-- dropdown menu
+
+	    	1.btn-group생성
+	    	2.submenu dropdown-menu 생성 ->  dropdown-item
+	    	3.dropdown-toggle add
+	    	4.data-toggle="dropdown" add
+
+	     -->
+	    <div class="container">
+
+	    	<div class="row">
+	    		<!-- a[#].btn.btn-primary>{Apple} -->
+	    		<div class="btn-group ml-auto">
+	    			<div class="btn-group">
+	    				<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Apple</a>
+	    				<div class="dropdown-menu">
+	    						<a href="#!" class="dropdown-item">smenu11</a>
+	    						<a href="#!" class="dropdown-item">smenu12</a>
+	    						<a href="#!" class="dropdown-item">smenu13</a>
+	    					</div>
+	    			</div>
+
+	    			<div class="btn-group">
+	    				<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Samsung</a>
+	    				<div class="dropdown-menu">
+	    					<a href="#!" class="dropdown-item">smenu21</a>
+	    					<a href="#!" class="dropdown-item">smenu22</a>
+	    					<a href="#!" class="dropdown-item">smenu23</a>
+	    				</div>
+	    			</div>
+
+	    			<div class="btn-group">
+	    				<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">LG</a>
+	    				<div class="dropdown-menu dropdown-menu-right">
+	    					<a href="#!" class="dropdown-item">smenu1</a>
+	    					<a href="#!" class="dropdown-item">smenu2</a>
+	    					<a href="#!" class="dropdown-item">smenu3</a>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<!-- 
+	    		<div class="btn-group btn-group-lg align-item-start">
+	    			<button type="button" class="btn btn-primary">Apple</button>
+	    			<button type="button" class="btn btn-primary">Samsung</button>
+	    			<button type="button" class="btn btn-primary">LG</button>
+	    		</div>
+	    	 -->
+	    </div>
+
+
+	    <div class="bg-dark">
+	    	<div class="container">
+	    		<div class="row">
+	    			<nav class="navbar navbar-expand-md navbar-default  navbar-dark col-12"> <!-- navbar-dark 로고 글자가 환해짐 -->
+	    				<a href="#!" class="navbar-brand">logo</a>
+	    				<button type="button" class="navbar-toggler" 
+	    				data-toggle="collapse" data-target="#menu1">
+
+	    					<span class="navbar-toggler-icon"></span>
+	    				</button>
+
+	    				<div class="collapse navbar-collapse" id="menu1">
+	    					<ul class="navbar-nav">
+	    						<li class="nav-item">
+	    							<a href="#!" class="nav-link text-white">link1</a>
+	    							
+	    						</li>
+	    						<li class="nav-item">
+	    							<a href="#!" class="nav-link text-white">link2</a>
+	    							
+	    						</li>
+	    					
+	    						<li class="nav-item">
+	    							<a href="#!" class="nav-link text-white">link3</a>
+	    							
+	    						</li>
+	    					</ul>
+	    				</div>
+	    				
+	    			</nav>
+	    			
+	    		</div>
+	    	</div>
+	    </div>
+	
+
+	
+
+<div class="bg-dark">
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-expand-md navbar-dark col-12">
+			  <a class="navbar-brand" href="#">Navbar</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Link</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled" href="#">Disabled</a>
+			      </li>
+			    </ul>
+			    <form class="form-inline my-2 my-lg-0">
+			      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			    </form>
+			  </div>
+			</nav>
+		</div>
+	</div>
+</div>
+<div class="jumbotron">
+	<div class="container">
+		<h1>Lorem ipsum.</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, corrupti!</p>
+	</div>
+</div>
+
+<style>
+	
+</style>
+
+<div class="wrap bg-info mt-3"> 
+	<div class="container">
+		<nav class="navbar navbar-dark navbar-expand-md">
+			<a href="#!" class="navbar-brand">logo</a>
+			
+	    				<button type="button" class="navbar-toggler" 
+	    				data-toggle="collapse" data-target="#menu1">
+
+	    					<span class="navbar-toggler-icon"></span>
+	    				</button>
+
+	    				<div class="collapse navbar-collapse" id="menu1">
+	    					<ul class="navbar-nav ml-auto">
+	    						<li class="nav-item pl-md-4 pr-md-4">
+	    							<a href="#!" class="nav-link text-white">link1</a>
+	    							
+	    						</li>
+	    						<li class="nav-item pl-md-4 pr-md-4">
+	    							<a href="#!" class="nav-link text-white">link2</a>
+	    							
+	    						</li>
+	    					
+	    						<li class="nav-item pl-md-4 pr-md-4">
+	    							<a href="#!" class="nav-link text-white">link3</a>
+	    							
+	    						</li>
+	    						<li class="nav-item dropdown pl-md-4 pr-md-4">
+						            <a class="nav-link text-white" href="#" id="dm1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          link4</a>
+        
+						        <div class="dropdown-menu dropdown-menu-right menu" aria-labelledby="dm1">
+						          <a class="dropdown-item" href="#">Action</a>
+						          <a class="dropdown-item" href="#">Another action</a>
+						          <div class="dropdown-divider"></div>
+						          <a class="dropdown-item" href="#">Something else here</a>
+						        </div>
+						      </li>
+
+
+						      <li class="nav-item dropdown  pl-md-4 pr-md-4">
+						        <a class="nav-link text-white" href="#" id="dm2" data-toggle="dropdown" >
+						          link5
+						        </a>
+						        <div class="dropdown-menu dropdown-menu-right menu" aria-labelledby="dm2">
+						          <a class="dropdown-item" href="#">Action</a>
+						          <a class="dropdown-item" href="#">Another action</a>
+						          <div class="dropdown-divider"></div>
+						          <a class="dropdown-item" href="#">Something else here</a>
+						        </div>
+						      </li>
+
+	    					</ul>
+	    				</div>
+		</nav>
+	</div>
+</div>
+
+<script>
+	// $(".navbar-nav>li.nav-item.dropdown").mouseover(function(){
+	// 	$(".dropdown-menu.menu").addClass("show")
+
+	// });
+	// $(".navbar-nav>li.nav-item.dropdown").mouseout(function(){
+	// 	$(".dropdown-menu.menu").removeClass("show")
+
+	// });
+
+	$(".navbar-nav>li.nav-item.dropdown").mouseover(function(){
+			$(this).find(".dropdown-menu").addClass("show");
+		});
+		$(".navbar-nav>li.nav-item.dropdown").mouseout(function(){
+			$(this).find(".dropdown-menu").removeClass("show");
+		});
+</script>
+
+<style>
+	.bgimg1{background-image:url(../images1/pc01.jpg);
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size: cover;}
+</style>
+
+<div class="wrap bg-info bgimg1">
+	<div class="container">
+		<div class="jumbotron bg-transparent text-md-center text-white mb-0">
+		  <h1 class="display-3" style="font-weight:bold;">Hello, world!</h1>
+		  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for
+		                  calling extra attention to featured content or information.</p>
+		  <hr class="my-2">
+		  
+		  <p class="lead">
+		    <a class="btn btn-primary btn-lg" href="#!" role="button">Some action</a>
+		  </p>
+		</div>
+	</div>
+</div>
+<!-- 
+	grid
+
+	col- < 576
+
+	576 <= col-sm < 768
+	768 <= col-md < 992
+	992 <= col-lg < 1200
+	col-xl >= 1200 
+-->
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 p-3"> <!-- md 이상은 6 이하는 12 -->
+			
+			<!-- ul.nav.nav-tabs>li.nav-item*4>a[#!].nav-link>{menu$} -->
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a href="#tab1" class="nav-link active" data-toggle="tab">menu1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#tab2" class="nav-link" data-toggle="tab">menu2</a>
+				</li>
+				<li class="nav-item">
+					<a href="#tab3" class="nav-link" data-toggle="tab">menu3</a>
+				</li>
+				<li class="nav-item">
+					<a href="#tab4" class="nav-link" data-toggle="tab">menu4</a>
+				</li>
+			</ul>
+
+			<div class="tab-content p-3">
+				<div class="tab-pane active" id="tab1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, tenetur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque culpa eaque enim, harum rerum, soluta, cupiditate minima suscipit incidunt quod, at non officiis ipsa maiores error voluptates tempora voluptate!</div>
+				<div class="tab-pane fade" id="tab2">Nesciunt quaerat earum atque ea fuga at, fugiat repudiandae tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, officia ipsum modi cumque suscipit. Optio incidunt repudiandae, earum tenetur ducimus, dolorem corporis vel deserunt libero soluta animi eos nemo, laborum.</div>
+				<div class="tab-pane fade" id="tab3">Minima facilis ullam eum, illo inventore. Voluptatibus nulla sunt repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta minima quod unde modi architecto totam quia reprehenderit, assumenda, voluptate quis dolorum molestiae, eius vel alias et, distinctio reiciendis excepturi deleniti.</div>
+				<div class="tab-pane fade" id="tab4">Ex dignissimos id totam optio obcaecati necessitatibus alias molestias at! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui temporibus, vitae totam magni, est minus, ipsam nesciunt expedita sit doloribus suscipit ut. Quas repellendus aperiam laborum odit cum quod saepe.</div>
+				
+			</div>
+		</div>
+
+		<div class="col-md-6 p-3">
+			
+			<!-- ul.nav.nav-tabs>li.nav-item*4>a[#!].nav-link>{menu$} -->
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<a href="#tab21" class="nav-link active" data-toggle="tab">menu1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#tab22" class="nav-link" data-toggle="tab">menu2</a>
+				</li>
+				<li class="nav-item">
+					<a href="#tab23" class="nav-link" data-toggle="tab">menu3</a>
+				</li>
+				<li class="nav-item">
+					<a href="#tab24" class="nav-link" data-toggle="tab">menu4</a>
+				</li>
+			</ul>
+
+			<div class="tab-content p-3">
+				<div class="tab-pane active" id="tab21">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, tenetur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque culpa eaque enim, harum rerum, soluta, cupiditate minima suscipit incidunt quod, at non officiis ipsa maiores error voluptates tempora voluptate!</div>
+				<div class="tab-pane fade" id="tab22">Nesciunt quaerat earum atque ea fuga at, fugiat repudiandae tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, officia ipsum modi cumque suscipit. Optio incidunt repudiandae, earum tenetur ducimus, dolorem corporis vel deserunt libero soluta animi eos nemo, laborum.</div>
+				<div class="tab-pane fade" id="tab23">Minima facilis ullam eum, illo inventore. Voluptatibus nulla sunt repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta minima quod unde modi architecto totam quia reprehenderit, assumenda, voluptate quis dolorum molestiae, eius vel alias et, distinctio reiciendis excepturi deleniti.</div>
+				<div class="tab-pane fade" id="tab24">Ex dignissimos id totam optio obcaecati necessitatibus alias molestias at! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui temporibus, vitae totam magni, est minus, ipsam nesciunt expedita sit doloribus suscipit ut. Quas repellendus aperiam laborum odit cum quod saepe.</div>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- <img src="../images/testimg.jpg" class="img-thumbnail" alt="">
+<img src="../images/testimg.jpg" class="rounded" alt="">
+<img src="../images/testimg.jpg" class="rounded-circle" alt=""> -->
+<style>
+	img{display: block; width: 100%;}
+</style>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-md-3"><img src="../images/testimg.jpg" class="rounded" alt=""></div>
+		<div class="col-sm-6 col-md-3"><img src="../images/testimg.jpg" class="rounded" alt=""></div>
+		<div class="col-sm-6 col-md-3 mt-sm-4 mt-md-0"><img src="../images/testimg.jpg" class="rounded" alt=""></div>
+		<div class="col-sm-6 col-md-3 mt-sm-4 mt-md-0"><img src="../images/testimg.jpg" class="rounded" alt=""></div>
+	</div>
+</div>
+
+<!-- <div class="card" style="width: 300px;">
+
+	<img src="../images/testimg.jpg" class="card-img-top" alt="">
+	<div class="card-body">
+		<h4 class="card-title">Mr.Han</h4>
+		<p class="card-text">Lorem ipsum dolor.</p>
+		<a href="#!" class="btn btn-primary">Profile</a>
+	</div>
+
+	
+</div> -->
+
+<div class="container mt-3">
+	<div class="row no-gutters">
+		<div class="col-md-3 col-sm-6">
+			<div class="card">
+
+			<img src="../images/testimg.jpg" class="card-img-top" alt="">
+			<div class="card-body">
+				<h4 class="card-title">Mr.Han</h4>
+				<p class="card-text">Lorem ipsum dolor.</p>
+				<a href="#!" class="btn btn-primary">Profile</a>
+			</div>
+
+	
+			</div>
+			
+		</div>
+		<div class="col-md-3 col-sm-6">
+					<div class="card" >
+
+			<img src="../images/testimg.jpg" class="card-img-top" alt="">
+			<div class="card-body">
+				<h4 class="card-title">Mr.Han</h4>
+				<p class="card-text">Lorem ipsum dolor.</p>
+				<a href="#!" class="btn btn-primary">Profile</a>
+			</div>
+
+	
+					</div>
+		</div>
+		<div class="col-md-3 col-sm-6 d-md-block">
+					<div class="card" >
+
+			<img src="../images/testimg.jpg" class="card-img-top" alt="">
+			<div class="card-body">
+				<h4 class="card-title">Mr.Han</h4>
+				<p class="card-text">Lorem ipsum dolor.</p>
+				<a href="#!" class="btn btn-primary">Profile</a>
+			</div>
+
+	
+					</div>
+		</div>
+		<div class="col-md-3 col-sm-6 d-md-block">
+					<div class="card" >
+
+			<img src="../images/testimg.jpg" class="card-img-top" alt="">
+			<div class="card-body">
+				<h4 class="card-title">Mr.Han</h4>
+				<p class="card-text">Lorem ipsum dolor.</p>
+				<a href="#!" class="btn btn-primary">Profile</a>
+			</div>
+
+	
+					</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
