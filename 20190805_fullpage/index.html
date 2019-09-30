@@ -6,7 +6,9 @@
 	<title>full page</title>
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
 	<script>
 		$(document).ready(function(){
@@ -34,6 +36,7 @@
 				$("html").animate({},300)
 			});
 
+$(".iframe").colorbox({iframe:true,innerWidth:900,innerHeight:500});
 			
 
 		     
@@ -213,7 +216,7 @@
 			<div class="main" id="onView">
 				<h3>Lorem ipsum.</h3>
 				<p>Lorem ipsum dolor sit.</p>
-				<a href="#">more</a>
+				<a href="http://dongwon8191.dothome.co.kr/main/bbs/board.php?bo_table=board" class="iframe">more</a>
 			</div>
 			<div class="scroll2"><a href="#3st">↓</a></div>
 		</div>
