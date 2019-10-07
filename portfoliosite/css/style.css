@@ -265,9 +265,12 @@ a:hover{
 .banner{
 	background:url(../assets/img/colorpop.jpg) no-repeat;
 	position:relative; 
+	background-size: cover;
+	display: none;
+   
 }
 .main_banner_area{
-	padding-top: 280px;
+	padding-top: 480px;
 }
 .single_banner{}
 .single_banner_text{
